@@ -20,8 +20,8 @@ const MainRoute = () => {
         <Route path="/hotpicks" element={<HotPicks/>}></Route>
         <Route path="/recipes" element={<Recipes />}></Route>
         <Route path="/help" element={<Help/>}></Route>
-        <Route path="/auth/login" element={<Login/>}></Route>
-        <Route path="/auth/register" element={<Signup />}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
         <Route path="*" element={<Flex flexDirection="column" align="center"justify="center">
         <Text fontSize="xl" textAlign="center">Page Not Found . . . .</Text>
         <Link to="/">
