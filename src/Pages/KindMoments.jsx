@@ -229,9 +229,9 @@ const KindMoments = () => {
             <Input type="text" placeholder="Search user or Shop" />
             <Select name="" id="">
               <option value="">All Locations</option>
-              <option value="">Mumbai</option>
-              <option value="">Hyderabad</option>
-              <option value="">kolkata</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="hyderbad">Hyderabad</option>
+              
             </Select>
             <Button>Search</Button>
           </BottRight>
