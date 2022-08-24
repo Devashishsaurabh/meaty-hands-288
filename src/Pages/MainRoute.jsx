@@ -9,10 +9,12 @@ import KindMoments from './KindMoments'
 import MealDeal from './MealDeal'
 import Recipes from './Recipes'
 import Signup from './Signup'
+import Navbar from '../Components/Navbar'
 
 const MainRoute = () => {
   return (
     <div>
+      <Navbar />
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mealdeal" element={<MealDeal />} />
