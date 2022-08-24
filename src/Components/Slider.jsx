@@ -63,9 +63,17 @@ const Container=styled.div`
     margin-bottom: 50px;
 `
 const Wrapper=styled.div`
-    width: 70%;
+    width: 60%;
     height: 40vh;
     margin: auto;
+    @media(max-width: 768px) {
+        width:80%;
+      
+      }
+      @media(max-width: 480px) {
+        width:100%;
+       
+    }
 
 `
 const SliderDiv=styled.div`

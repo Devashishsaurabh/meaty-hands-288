@@ -16,7 +16,6 @@ import style from "./style.module.css";
 
 const Home = () => {
   const dispatch = useDispatch();
-
   const data = useSelector((state) => state.AppReducer.news);
   const movement = useSelector((state) => state.AppReducer.Moments);
   const resto = useSelector((state) => state.AppReducer.Resto);
@@ -45,10 +44,8 @@ const Home = () => {
 
   return (
     <div>
-      <div>
-        <br />
-        <Slider />
-      </div>
+      <Slider />
+
       <div className={style.name}>
         <div className={style.first}>
           Latest News & Videos
@@ -62,12 +59,15 @@ const Home = () => {
         </div>
 
         <div className={style.main}>
-         
           {data.map((item) => {
             return (
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div className={style.image}>
-                  <img  style={{height:"100%",width:"100%"}} src={item.image} alt="" />{" "}
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={item.image}
+                    alt=""
+                  />{" "}
                 </div>
                 <div
                   style={{
@@ -84,115 +84,127 @@ const Home = () => {
         </div>
       </div>
       <br />
-      <div className={style.name}>
-        <div className={style.first}>
-          Latest News & Videos
-          <div className={style.nameInside}>
-            <h1>Save Lives with Your Blog </h1>
-            <div>.</div>
-            <h1>News & Articles </h1>
-            <div>.</div>
-            <h1>Follow Our Facebook</h1>
-          </div>
-        </div>
 
-       
-        <div className={style.main}>
-          {/* <h1>Home Page  hai</h1> */}
-          {movement.map((item) => {
-            return (
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <div className={style.image}>
-                  <img  style={{height:"100%",width:"100%"}} src={item.image} alt="" />{" "}
-                </div>
-                <div
-                  style={{
-                    textAlign: "center",
-                    fontSize: "14px",
-                    color: "#333333",
-                  }}
-                >
-                  {item.contain}{" "}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
       <br />
       {/* 2rd ////// */}
 
       <div className={style.name}>
-        <div className={style.first}>Discover Restaurants</div>
-        <div className={style.nameInside}>
-          <h1>Vegetarian Directory </h1>
-          <div>.</div>
-          <h1> Restaurant Menu </h1>
-          <div>.</div>
-          <h1>Food Map</h1>
+        <div className={style.first}>
+          Yummylicious Moments
+          <div className={style.nameInside}>
+            <h1>Secret Recipes</h1>
+            <div>.</div>
+            <h1> Member Hot Picks</h1>
+            <div>.</div>
+            <h1>Photo Moments</h1>
+          </div>
         </div>
-      </div>
 
-      <div className={style.main}>
-        {resto.map((item) => {
-          return (
-            <div>
-              <div>
-                {" "}
-                <img src={item.image} alt="" />{" "}
+        <div className={style.main}>
+          {movement.map((item) => {
+            return (
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div className={style.image}>
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={item.image}
+                    alt=""
+                  />{" "}
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    fontSize: "14px",
+                    color: "#333333",
+                  }}
+                >
+                  {item.contain}{" "}
+                </div>
               </div>
-              <div
-                style={{
-                  textAlign: "center",
-                  fontSize: "14px",
-                  color: "#333333",
-                }}
-              >
-                {" "}
-                {item.contain}{" "}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
       <br />
       {/* ////3rd//// */}
 
       <div className={style.name}>
-        <div className={style.first}>Amazing Superheroes</div>
-        <div className={style.nameInside}>
-          <h1>Latest Buzz </h1>
-          <div>.</div>
-          <h1> Lifestyle Ambassadors </h1>
-          <div>.</div>
-          <h1>Win Gifts!</h1>
+        <div className={style.first}>
+          Discover Restaurants
+          <div className={style.nameInside}>
+            <h1>Vegetarian Directory</h1>
+            <div>.</div>
+            <h1>Restaurant Menu</h1>
+            <div>.</div>
+            <h1> Food Map</h1>
+          </div>
+        </div>
+
+        <div className={style.main}>
+          {resto.map((item) => {
+            return (
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div className={style.image}>
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={item.image}
+                    alt=""
+                  />{" "}
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    fontSize: "14px",
+                    color: "#333333",
+                  }}
+                >
+                  {item.contain}{" "}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-
-      <div className={style.main}>
-        {amazing.map((item) => {
-          return (
-            <div>
-              <div>
-                {" "}
-                <img src={item.image} alt="" />{" "}
-              </div>
-              <div
-                style={{
-                  textAlign: "center",
-                  fontSize: "14px",
-                  color: "#333333",
-                }}
-              >
-                {item.contain}{" "}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
       <br />
+      <div className={style.name}>
+        <div className={style.first}>
+          Amazing Superheroes
+          <div className={style.nameInside}>
+            <h1>Latest Buzz</h1>
+            <div>.</div>
+            <h1> Lifestyle Ambassadors</h1>
+            <div>.</div>
+            <h1>Win Gifts!</h1>
+          </div>
+        </div>
+
+        <div className={style.main}>
+          {/* <h1>Home Page  hai</h1> */}
+          {amazing.map((item) => {
+            return (
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div className={style.image}>
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={item.image}
+                    alt=""
+                  />{" "}
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    fontSize: "14px",
+                    color: "#333333",
+                  }}
+                >
+                  {item.contain}{" "}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
 
       <Heading className={style.heading}>
         Introducing The World's 1st Meat-Free Lifestyle Platform
