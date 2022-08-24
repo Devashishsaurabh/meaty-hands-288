@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import styled from "styled-components";
 import { useDispatch,useSelector } from 'react-redux';
 import KindCard from '../Components/KindCard';
 import { getData } from '../Redux/AppReducer/action';
 import axios from 'axios';
-
-
-
-
 
 const Top = styled.div`
   width: 100%;
@@ -58,13 +54,13 @@ const Topright = styled.div`
 const About = styled.div`
   margin-bottom:2px;
 `;
-const Bott_left = styled.div`
+const BottLeft = styled.div`
   display: flex;
   justify-content: flex-start;
   gap: 20px;
 `;
 
-const Bott_right = styled.div`
+const BottRight = styled.div`
   display: flex;
   gap: 10px;
 `;
@@ -185,11 +181,10 @@ const KindMoments = () => {
   
   useEffect(()=>{
     axios.get("https://21wj24.sse.codesandbox.io/data").then((data)=>{
-      setState(data)
+      setState(data.data)
     })
   })
   
-
   return (
     <>
      <Top>
@@ -225,12 +220,12 @@ const KindMoments = () => {
         </Top>
 
         <Bott>
-          <Bott_left>
+          <BottLeft>
             <Button3>Moments</Button3>
             <Button2>Deal Reviews</Button2>
             <Button2>Following</Button2>
-          </Bott_left>
-          <Bott_right>
+          </BottLeft>
+          <BottRight>
             <Input type="text" placeholder="Search user or Shop" />
             <Select name="" id="">
               <option value="">All Locations</option>
@@ -239,11 +234,11 @@ const KindMoments = () => {
               <option value="">kolkata</option>
             </Select>
             <Button>Search</Button>
-          </Bott_right>
+          </BottRight>
         </Bott>
         
        
-        <KindCard res={data}/>
+        <KindCard res={state}/>
     
      </>
     

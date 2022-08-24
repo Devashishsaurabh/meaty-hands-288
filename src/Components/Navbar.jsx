@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from "styled-components"
-import {Link, NavLink} from 'react-router-dom'
-import { Tooltip } from '@chakra-ui/react'
+import { Link, NavLink} from 'react-router-dom'
+import { Tooltip, useDisclosure } from '@chakra-ui/react'
+import SignupModal from '../Modal/SignupModal'
+import Login from '../Modal/Login'
 
 const Container=styled.div`
   margin:0;
@@ -16,8 +18,11 @@ justify-content: space-between;
 align-items: center;
 width:60%;
 margin: auto;
- @media(max-width: 768px) {
+@media(max-width: 968px) {
   width:80%;
+}
+ @media(max-width: 768px) {
+  width:100%;
 }
 @media(max-width: 480px) {
   width:100%;
@@ -103,6 +108,11 @@ const Content=styled.div`
     font-weight: 600;
     justify-content: space-between;
     box-sizing: border-box;
+    @media(max-width: 968px) {
+      width:80%;
+      font-size: 15px;
+    font-weight: 600;
+    }
     @media(max-width: 768px) {
       width:100%;
       font-size: 10px;
@@ -142,16 +152,20 @@ const baseStyle={
 
 
 const Navbar = () => {
+  const { isOpen:isSignupOpen, onOpen:onSignupOpen, onClose:onSignupClose} = useDisclosure();
+  const { isOpen: isLoginOpen , onOpen: onLoginOpen, onClose: onLoginClose } = useDisclosure()
   return (
     <Container>
       <TopWrapper>
         <Left>
+          <Link to="/">
           <Logo>
             <Image
               src="https://www.kindmeal.my/images/logo-kindmeal.png"
               alt="logo"
             />
           </Logo>
+          </Link>
         </Left>
         <Center>
           <Icon>
@@ -188,34 +202,22 @@ const Navbar = () => {
         <Right>
           
           <Option>
-            <Link
-              to="/login"
-              style={{ textDecoration: "none", color: "black" }}
-            >
               Login
-            </Link>{" "}
           </Option>
-          <Tooltip fontSize={13} label='Login with Facebook Account' placement='bottom-start' bg="white" color="black" border="1px solid black" openDelay={500}>
+          <Tooltip fontSize={13} label='Login with Facebook Account' placement='bottom-start' bg="white" color="black" border="1px solid black">
           <Option bg="#34619f" color="white" style={{padding:"3px 20px 3px 20px"}}>
             Facebook
           </Option>
           </Tooltip>
-          <Tooltip fontSize={13} label='Login with KindMeal Account' placement='bottom-start' bg="white" color="black" border="1px solid black" openDelay={500}>
-          <Option bg="#666666" color="white" style={{padding:"3px 15px 3px 15px"}}>
-            <Link
-              to="/login"
-              style={{ textDecoration: "none", color: "white" }}
-            >
+          <Tooltip fontSize={13} label='Login with KindMeal Account' placement='bottom-start' bg="white" color="black" border="1px solid black" >
+          <Option bg="#666666" color="white" style={{padding:"3px 15px 3px 15px"}} onClick={onLoginOpen}  > 
               Email
-            </Link>
+              <Login isOpen={isLoginOpen} onClose={onLoginClose}/>
           </Option>
+          
           </Tooltip>
-          <Link
-            to={"/signup"}
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <Option>Sign Up</Option>
-          </Link>
+            <Option onClick={onSignupOpen}>Sign Up</Option>
+          <SignupModal  isOpen={isSignupOpen} onClose={onSignupClose} />
         </Right>
       </TopWrapper>
       <BottomWrapper>
