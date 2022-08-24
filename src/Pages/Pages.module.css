@@ -1,0 +1,15 @@
+.helpmain{
+    display: flex;
+    text-align: center;
+}
+.helpmain>:nth-child(1){
+   width: 50%;
+   border-right: 1px solid red;
+   height: 100vh;
+}
+.helpmain>:nth-child(2){
+    width: 100%;
+}
+.helpcard{
+    border: 1px solid red;
+}
