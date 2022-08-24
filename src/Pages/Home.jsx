@@ -61,10 +61,8 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <div  style={{display:'flex',gap:"23px",justifyContent:"center" ,width:"80%",justifyContent: "center",marginLeft:"70px"}}  >
-         */}
         <div className={style.main}>
-          {/* <h1>Home Page  hai</h1> */}
+         
           {data.map((item) => {
             return (
               <div style={{ display: "flex", flexDirection: "column" }}>
@@ -98,8 +96,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <div  style={{display:'flex',gap:"23px",justifyContent:"center" ,width:"80%",justifyContent: "center",marginLeft:"70px"}}  >
-         */}
+       
         <div className={style.main}>
           {/* <h1>Home Page  hai</h1> */}
           {movement.map((item) => {
