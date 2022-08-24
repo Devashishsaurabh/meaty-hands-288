@@ -9,7 +9,7 @@ const KindMoments = () => {
       <div className={styles.topleft}>
         <div className={styles.box1}>
           <div className={styles.toplefttop}>
-           <div className={styles.headingptag}>Kind Moments</div>
+           <div className={styles.headingptag}>Kind </div>
            <div className={styles.headingptag}>| Saving Lives with Yummy Photos</div>
           </div>
           <div className={styles.about}> 
