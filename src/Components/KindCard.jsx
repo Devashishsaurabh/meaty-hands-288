@@ -94,6 +94,7 @@ const KindCard = ({res}) => {
     {
       res.map((e)=>{
 
+  
       return <Mainbox>
      <Topsection>
       <ProfileImage src={e.avatar}/> 
