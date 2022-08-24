@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
+import axios from "axios";
+import KindCard from '../Components/KindCard';
 
 
 
@@ -176,6 +178,20 @@ const Box1 = styled.div`
 
 
 const KindMoments = () => {
+
+  const[state,setState]=useState([])
+
+  useEffect(()=>{
+    axios.get("https://21wj24.sse.codesandbox.io/data").then((data)=>{
+      setState(data)
+    })
+
+    
+  },[])
+  //console.log(data)
+
+
+
   return (
     <>
      <Top>
@@ -227,6 +243,8 @@ const KindMoments = () => {
             <Button>Search</Button>
           </Bott_right>
         </Bott>
+
+       <KindCard res={state}/> 
     
      </>
     
