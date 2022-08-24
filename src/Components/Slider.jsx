@@ -73,7 +73,7 @@ const Wrapper=styled.div`
       @media(max-width: 480px) {
         width:100%;
        
-      }
+    }
 
 `
 const SliderDiv=styled.div`
