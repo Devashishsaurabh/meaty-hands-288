@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./Kindmoments.module.css"
+import styles from "./KindMoments.module.css"
 
 const KindMoments = () => {
   return (
