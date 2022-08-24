@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from "styled-components";
-import axios from "axios";
+import { useDispatch,useSelector } from 'react-redux';
 import KindCard from '../Components/KindCard';
+import { getData } from '../Redux/AppReducer/action';
+import axios from 'axios';
 
 
 
@@ -180,17 +182,13 @@ const Box1 = styled.div`
 const KindMoments = () => {
 
   const[state,setState]=useState([])
-
+  
   useEffect(()=>{
     axios.get("https://21wj24.sse.codesandbox.io/data").then((data)=>{
       setState(data)
     })
-
-    
-  },[])
-  //console.log(data)
-
-
+  })
+  
 
   return (
     <>
@@ -243,8 +241,9 @@ const KindMoments = () => {
             <Button>Search</Button>
           </Bott_right>
         </Bott>
-
-       <KindCard res={state}/> 
+        
+       
+        <KindCard res={data}/>
     
      </>
     

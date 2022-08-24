@@ -92,7 +92,7 @@ const KindCard = ({res}) => {
     <Container>
     {
       res.map((e)=>{
-
+     
       <Mainbox>
      <Topsection>
       <ProfileImage src={e.avatar}/> 
