@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
+import axios from "axios";
 
 
 
@@ -176,6 +177,20 @@ const Box1 = styled.div`
 
 
 const KindMoments = () => {
+
+  const[data,setData]=useState([])
+
+  useEffect(()=>{
+    axios.get("https://21wj24.sse.codesandbox.io/data").then((data)=>{
+      setData(data)
+    })
+
+    
+  },[])
+  //console.log(data)
+
+
+
   return (
     <>
      <Top>
