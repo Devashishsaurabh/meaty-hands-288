@@ -5,14 +5,15 @@ import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 
 const Container=styled.div`
-  display:flex;
-  width:72%;
-`;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  width:70%;
+  margin:auto;
+`
 const Mainbox=styled.div`
-  width:300px;
-  margin:40px 30px 30px 20px;
   border:1px solid black;
-`;
+`
 
 const Topsection=styled.div`
   display:flex;
@@ -93,7 +94,7 @@ const KindCard = ({res}) => {
     {
       res.map((e)=>{
 
-      <Mainbox>
+      return <Mainbox>
      <Topsection>
       <ProfileImage src={e.avatar}/> 
       <NameDate>
