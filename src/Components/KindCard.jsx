@@ -1,4 +1,8 @@
 import React from 'react'
+import styled from "styled-components";
+import FavoriteTwoToneIcon from "@mui/icons-material/FavoriteTwoTone";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 
 const Container=styled.div`
   display:flex;
@@ -43,6 +47,7 @@ const View=styled.button`
 height:20px;
 width:80px;
 background-color:red;
+color:white;
 
 `;
 
@@ -57,16 +62,67 @@ height:240px;
 
 `;
 
-cons
+const Message=styled.div`
+display: flex;
+justify-content: center;
+padding: 5px;
+gap: 20px;
+width: 95%;
+height: 40px;
+
+`;
+
+const Title=styled.div`
+
+font-size: 14px;
+text-align: center;
+text-decoration: none;
+color: gray;
+
+`;
 
 
 
 
-const KindCard = () => {
+
+const KindCard = ({res}) => {
+
   return (
     <>
     <Container>
+    {
+      res.map((e)=>{
 
+      <Mainbox>
+     <Topsection>
+      <ProfileImage src={e.avatar}/> 
+      <NameDate>
+       <Name>{e.username}</Name>
+       <Date>August {Math.floor(Math.random()*30)}th 2022</Date>
+      </NameDate>
+      <View>View</View>
+     </Topsection>
+
+     <Bottom>
+      <Image src={e.img}/>
+      <Message>
+      <FavoriteTwoToneIcon color="disabled" />
+      <PhotoCameraIcon color="disabled" />
+      <ChatBubbleIcon color="disabled" />
+      </Message>
+      <Title>{e.title}</Title>
+     </Bottom>
+
+     
+
+    </Mainbox>
+
+
+
+
+      })
+    }
+    
 
 
     </Container>
@@ -76,3 +132,4 @@ const KindCard = () => {
 }
 
 export default KindCard
+
