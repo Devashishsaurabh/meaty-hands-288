@@ -3,10 +3,6 @@ import styled from "styled-components";
 import axios from "axios";
 import KindCard from '../Components/KindCard';
 
-
-
-
-
 const Top = styled.div`
   width: 100%;
   height: 300px;
@@ -183,7 +179,7 @@ const KindMoments = () => {
 
   useEffect(()=>{
     axios.get("https://21wj24.sse.codesandbox.io/data").then((data)=>{
-      setState(data)
+      setState(data.data)
     })
 
     

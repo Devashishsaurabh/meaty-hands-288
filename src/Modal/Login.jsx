@@ -2,15 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/modal'
 import { Box,  Input, useToast} from '@chakra-ui/react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { FaFacebook } from 'react-icons/fa';
 import { Button, Center, Text } from '@chakra-ui/react';
 
 const Logo=styled.img`
 @media only screen and (max-width:1150px){
     width: 70%;
-}
-    
+} 
 `
 const Form=styled.form`
  display:flex;

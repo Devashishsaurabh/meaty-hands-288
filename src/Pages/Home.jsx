@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
 import Slider from "../Components/Slider";
 import {
   getProductsData,
