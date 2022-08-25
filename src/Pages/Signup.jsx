@@ -128,16 +128,9 @@ const BBannerimg = styled.img`
 `
 const initialState={
   name:"",
-  email:"",
-  re_enter_email:"",
-  password:"",
   username:"",
-  birth:"",
-  country:"",
-  state:"",
-  gender:"",
-  profile_photo:"",
-
+  email:"",
+  password:"",
 };
 const reducer = (state, action) => {
 switch (action.type) {
@@ -147,27 +140,15 @@ switch (action.type) {
     return { ...state, email: action.payload };
   case "password":
     return { ...state, password: action.payload };
-  case "re_enter_email":
-    return {...state,re_enter_email:action.payload}
   case "username":
     return { ...state, username: action.payload };
-  case "birth":
-    return { ...state, birth: action.payload };
-    case "country":
-      return { ...state, country: action.payload };
-      case "state":
-        return { ...state, state: action.payload };
-        case "gender":
-          return { ...state, gender: action.payload };
-          case "profile_photo":
-            return { ...state, profile_photo: action.payload };
   default:
     return state;
 }
 };
 
 const Signup = () => {
-  // const toast = useToast()
+  const toast = useToast()
   const [state, setState] = useReducer(reducer, initialState);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -178,17 +159,24 @@ const Signup = () => {
     const handleSubmit=(e)=>{
       e.preventDefault()
       console.log(state)
-      // dispatch(register(state)).then((r) => {
-      //   toast({
-      //     title: 'Account created.',
-      //     description: "We've created your account for you.",
-      //     status: 'success',
-      //     duration: 9000,
-      //     isClosable: true,
-      //   })
-      //   navigate("/", { replace: true });
-      // });
-      navigate("/", { replace: true });
+      dispatch(register(state)).then((r) => {
+        toast({
+          title: 'Account created.',
+          description: "We've created your account for you.",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })
+        navigate("/", { replace: true });
+      }).catch((e)=>{
+        toast({
+          title: 'Registration Failed',
+          description: "Try Again",
+          status: 'error',
+          duration: 9000,
+          isClosable: true,
+        })
+      });
     }
 
   return (
@@ -297,10 +285,7 @@ const Signup = () => {
                           <br />
                           <div style={{ display: "flex",}}>
                               <Input name="re_enter_email"  style={{width:"80%"}} type="email"
-                              value={state.re_enter_email}
-                              onChange={(e) =>
-                                setState({ type: "re_enter_email", payload: e.target.value })
-                             }/>
+                              />
                           </div>
 
                           <br />
@@ -330,37 +315,26 @@ const Signup = () => {
                            </div>
                           <div style={{ display: "flex" }}>
                               <Input name="birth" style={{width:"80%"}} type="date" placeholder="Month/Day/Year"
-                              value={state.birth}
-                              onChange={(e) =>
-                                setState({ type: "birth", payload: e.target.value })
-                             }/>
+                          
+                              />
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
                               <Input name="country" style={{width:"80%"}} type="text" placeholder="Select Country"
-                              value={state.country}
-                              onChange={(e) =>
-                                setState({ type: "country", payload: e.target.value })
-                             }/>
+                              />
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
                               <Input name="state" style={{width:"80%"}} type="text" placeholder="Select State"
-                              value={state.state}
-                              onChange={(e) =>
-                                setState({ type: "state", payload: e.target.value })
-                             }/>
+                              />
                           </div>
 
                           <br />
                           <div>
                               <select name="gender" 
-                              onChange={(e) =>
-                                
-                                setState({ type: "gender", payload: e.target.value })
-                             } style={{
+                             style={{
                                   
                                   padding: "10px",
                                   border : "1px solid lightgrey",
@@ -374,9 +348,7 @@ const Signup = () => {
                           <br />
                           <div>
                               <input name="profile_photo"  type="file" placeholder="Select Photo"
-                              onChange={(e) =>
-                                setState({ type: "profile_photo", payload: e.target.value })
-                             }></input>
+                            ></input>
                           </div>
                           <div style={{ display: "flex", margin: "10px 0 0 0px" }}>
                           <input type="checkbox" />

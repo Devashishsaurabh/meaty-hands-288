@@ -1,5 +1,5 @@
 import { Button, Flex, Text } from '@chakra-ui/react'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import Login from '../Modal/Login'
 import Help from './Help'
@@ -10,6 +10,7 @@ import MealDeal from './MealDeal'
 import Recipes from './Recipes'
 import Signup from './Signup'
 import Navbar from '../Components/Navbar'
+import Logout from './Logout'
 
 const MainRoute = () => {
   const location=useLocation()
@@ -30,6 +31,7 @@ const MainRoute = () => {
         <Route path="/recipes" element={<Recipes />}></Route>
         <Route path="/help" element={<Help/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
+        <Route path="/logout" element={<Logout/>}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="*" element={<Flex flexDirection="column" align="center"justify="center">
         <Text fontSize="xl" textAlign="center">Page Not Found . . . .</Text>

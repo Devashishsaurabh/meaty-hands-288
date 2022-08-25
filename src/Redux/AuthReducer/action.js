@@ -1,10 +1,14 @@
 import axios from "axios";
 import * as types from "./actiontype"
-
+import { saveLocalData } from "../../utils/localStorage";
 export const register = (payload) => (dispatch) => {
   dispatch({ type: types.SIGNUP_REQUEST });
   return axios
-    .post("http://localhost:8080/auth/register", payload)
+    .post("https://pcomm-api.herokuapp.com/users/register", payload,{
+      headers:{
+        "Access-Control-Allow-Origin":"*",
+      }
+    })
     .then((r) => {
       dispatch({ type: types.SIGNUP_SUCCESS, payload: r.data });
     })
@@ -14,9 +18,14 @@ export const register = (payload) => (dispatch) => {
 export const login = (params) => (dispatch) => {
     dispatch({ type: types.LOGIN_REQUEST });
     return axios
-      .post("http://localhost:8080/auth/login", params)
+      .post("https://pcomm-api.herokuapp.com/users/login", params,{
+        headers:{
+          "Access-Control-Allow-Origin":"*",
+        }
+      })
       .then((r) => {
         dispatch({ type: types.LOGIN_SUCCESS, payload: r.data.token });
+        saveLocalData("user",r.data.user.username)
       })
       .catch((e) => {
         dispatch({ type: types.LOGIN_FAILURE, payload: e });

@@ -11,7 +11,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Heading, Box } from "@chakra-ui/react";
 
 import style from "./style.module.css";
-import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();

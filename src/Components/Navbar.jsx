@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-import { Link, NavLink} from 'react-router-dom'
-import { Tooltip, useDisclosure } from '@chakra-ui/react'
+import { Link, NavLink, useNavigate} from 'react-router-dom'
+import {  Popover,  PopoverBody, PopoverContent, PopoverTrigger, Tooltip, useDisclosure } from '@chakra-ui/react'
 import SignupModal from '../Modal/SignupModal'
 import Login from '../Modal/Login'
 
@@ -140,6 +140,14 @@ const Nav=styled.div`
     padding:0px 10px 0px 10px;
   }
 `
+const But=styled.div`
+padding:5px 0px 5px 0px;
+&:hover{
+  background-color:#E8E8E8;
+}
+`
+ 
+
 const activeStyle={
   backgroundColor:"#439760",
   color:"white",
@@ -152,8 +160,18 @@ const baseStyle={
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { isOpen:isSignupOpen, onOpen:onSignupOpen, onClose:onSignupClose} = useDisclosure();
   const { isOpen: isLoginOpen , onOpen: onLoginOpen, onClose: onLoginClose } = useDisclosure()
+  const data= localStorage.getItem("user")
+
+  const logoutHandler = () => {
+    new Promise((res, rej) => {
+      res(localStorage.removeItem("token" && "user"));
+    }).then(() => {
+      navigate("/logout",{replace:true});
+    });
+  };
   return (
     <Container>
       <TopWrapper>
@@ -199,6 +217,7 @@ const Navbar = () => {
             </a>
           </Icon>
         </Center>
+        {data===null ?
         <Right>
           
           <Option>
@@ -218,7 +237,29 @@ const Navbar = () => {
           </Tooltip>
             <Option onClick={onSignupOpen}>Sign Up</Option>
           <SignupModal  isOpen={isSignupOpen} onClose={onSignupClose} />
-        </Right>
+        </Right>:<Right>
+          
+          <Option><img src="https://www.kindmeal.my/images/icon_notice.png" alt=""/></Option>
+          <Option></Option>
+        
+          <Popover trigger="hover" >
+       <PopoverTrigger >
+       <Option style={{display:"flex",alignItems:"center",fontWeight:"600", fontSize:"16px",textTransform: "Capitalize"}}>{data}
+       <Option><img src="https://www.kindmeal.my/images/no_photo_header.png" alt=""/></Option></Option>
+       
+       </PopoverTrigger>
+       <PopoverContent w={200}>
+       <PopoverBody fontSize={14}  display="flex" flexDirection="column">
+        <But>My Coupons</But>
+        <But>My Recipes</But>
+        <But>My KindMeal Profile</But>
+        <But>Update Profile</But>
+        <But onClick={logoutHandler}>Logout</But>
+       </PopoverBody>
+       </PopoverContent>
+       </Popover>
+       
+          </Right>}
       </TopWrapper>
       <BottomWrapper>
         <Content>
