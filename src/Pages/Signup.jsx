@@ -12,6 +12,7 @@ const Signupdiv=styled.div`
 width : 60%;
 margin : auto;
 margin-bottom : 100px;
+// border:1px solid red;
 display : flex;
 `
 const Signupdivimg=styled.div`
@@ -69,7 +70,7 @@ font-size: 26px;
 font-weight:600;
 `
 const Signupdetaildiv=styled.div`
-width : 95%;
+width : 90%;
 // border : 1px solid red;
 margin : 50px 10px 20px 10px;
 display : flex;
@@ -81,7 +82,7 @@ padding-left : 10px;
 `
 const Detaildiv =styled.form`
 width : 72%;
-// border-left : 1px solid grey; 
+// border: 1px solid grey; 
 margin-left : 5%;
 `
 const P=styled.p`
@@ -94,8 +95,8 @@ font-weight: normal;
 line-height: 20px;
 color: #666666;
 padding: 3px 10px 3px 10px;
-height: 30px;
-border-radius : 8px;
+height: 40px;
+border-radius : 5px;
 border : 1px solid lightgrey;
 &:focus {
     outline: none;
@@ -187,6 +188,7 @@ const Signup = () => {
       //   })
       //   navigate("/", { replace: true });
       // });
+      navigate("/", { replace: true });
     }
 
   return (
@@ -240,11 +242,13 @@ const Signup = () => {
                           <br />
                           <P>Email</P>
                           <br />
-                          <br />
+                          <br/>
                           <P>Re-Enter Email:</P>  
                           <br />
+                          <br/>
                           <P>Password</P>  
                           <br />
+                          <br/>
                           <P>Username</P> 
                           <br />
                           <br/>
@@ -253,6 +257,7 @@ const Signup = () => {
                           <br/>
                           <P>Country</P>
                           <br />
+                          <br/>
                           <P>State</P>
                           <br />
                           <br />
@@ -273,7 +278,7 @@ const Signup = () => {
                           value={state.name}
                           onChange={(e) =>
                              setState({ type: "name", payload: e.target.value })
-                          }/>
+                          } required/>
                               <Input name="lastname" style={{marginLeft:"10px"}} type="text" title="First name"/>
                           </div>
 
@@ -286,12 +291,12 @@ const Signup = () => {
                               value={state.email}
                               onChange={(e) =>
                                 setState({ type: "email", payload: e.target.value })
-                             }/>
+                             } required/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex",}}>
-                              <Input name="re_enter_email"  style={{width:"80%"}} type="text"
+                              <Input name="re_enter_email"  style={{width:"80%"}} type="email"
                               value={state.re_enter_email}
                               onChange={(e) =>
                                 setState({ type: "re_enter_email", payload: e.target.value })
@@ -304,7 +309,7 @@ const Signup = () => {
                               value={state.password}
                               onChange={(e) =>
                                 setState({ type: "password", payload: e.target.value })
-                             }/>
+                             } required/>
                           </div>
 
                           <br />
@@ -316,7 +321,7 @@ const Signup = () => {
                               value={state.username}
                               onChange={(e) =>
                                 setState({ type: "username", payload: e.target.value })
-                             }/>
+                             } required/>
                           </div>
 
                           <br />
@@ -353,12 +358,13 @@ const Signup = () => {
                           <div>
                               <select name="gender" 
                               onChange={(e) =>
+                                
                                 setState({ type: "gender", payload: e.target.value })
                              } style={{
                                   
                                   padding: "10px",
                                   border : "1px solid lightgrey",
-                                  fontSize: "16px"}}>
+                                  fontSize: "16px"}} required>
                                   <option >Select Gender</option>
                                   <option value="male">Male</option>
                                   <option value="female">Female</option>
