@@ -1,6 +1,6 @@
 import { Button, Flex, Text } from '@chakra-ui/react'
-import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import Login from '../Modal/Login'
 import Help from './Help'
 import Home from './Home'
@@ -12,6 +12,13 @@ import Signup from './Signup'
 import Navbar from '../Components/Navbar'
 
 const MainRoute = () => {
+  const location=useLocation()
+
+      if(location.pathname==="*"||"/*"||"/not"){
+        document.title="Page Not Found";
+      }
+   
+
   return (
     <div>
       <Navbar />
