@@ -27,7 +27,6 @@ function getProductsData() {
 }
 
 function getProductsData1() {
-
     return async (dispatch) => {
         dispatch({
             type: REQUEST1,
@@ -55,7 +54,6 @@ function getProductsData1() {
 
 
 function getProductsData2() {
-
     return async (dispatch) => {
         dispatch({
             type: REQUEST2,

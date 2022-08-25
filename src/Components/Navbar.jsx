@@ -100,11 +100,11 @@ const BottomWrapper=styled.div`
     background-color:#2bb673;
 `
 const Content=styled.div`
-    width: 60%;
+    width: 70%;
     height:100%;
     display: flex;
     margin: auto;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     justify-content: space-between;
     box-sizing: border-box;

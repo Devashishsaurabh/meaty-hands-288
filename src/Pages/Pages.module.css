@@ -4,7 +4,7 @@
 }
 .sidebarMainLeft{
     width: 30%;
-    border-right:1px solid red ;
+    /* border-right:1px solid red ; */
     text-align: center;
 }
 .sidebarMainContent{
@@ -39,4 +39,15 @@
 
 .active-link>div{
     background-color:whitesmoke
+}
+
+/*  MealDeal page styling  */
+
+.Banner{
+    background: whitesmoke;
+}
+.Banner>div{
+    width: 70%;
+    margin: auto;
+    padding: 20px;
 }
