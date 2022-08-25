@@ -129,11 +129,11 @@ const Login = ({ isOpen, onClose }) => {
             </Center>
           </a>
           <Box display="flex" justifyContent="space-between" pb={3}>
-            <Button bg="transparent" onClick={onClose}>
+            <Button colorScheme="transparent" color="grey" onClick={onClose}>
               Forgot Password ?
             </Button>
 
-            <Button bg="transparent" onClick={onClose}>
+            <Button colorScheme="transparent" color="grey" onClick={onClose}>
               <p onClick={handlenavi}>Not a member? Sign up FREE!</p>
             </Button>
           </Box>
