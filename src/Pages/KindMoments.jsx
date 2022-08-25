@@ -1,8 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import styled from "styled-components";
-import { useDispatch,useSelector } from 'react-redux';
 import KindCard from '../Components/KindCard';
-import { getData } from '../Redux/AppReducer/action';
 import axios from 'axios';
 
 const Top = styled.div`
@@ -178,6 +176,10 @@ const Box1 = styled.div`
 const KindMoments = () => {
 
   const[state,setState]=useState([])
+  useEffect(()=>{
+    document.title="KindMoments, Saving Lives One Photo At A Time | KindMeal.my"
+  })
+    
   
   useEffect(()=>{
     axios.get("https://21wj24.sse.codesandbox.io/data").then((data)=>{

@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Heading, Box } from "@chakra-ui/react";
 
 import style from "./style.module.css";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,9 @@ const Home = () => {
   const amazing = useSelector((state) => state.AppReducer.Amazing);
   const coupon = useSelector((state) => state.AppReducer.Coupon);
 
+  useEffect(()=>{
+    document.title="Delicious Meat-Free Meals, Vegetarian Cuisines, Kind Meal Discount Coupons for Restaurants & Cafes in Malaysia | KindMeal.my"
+  })
   useEffect(() => {
     dispatch(getProductsData());
   }, [dispatch]);

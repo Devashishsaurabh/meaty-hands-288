@@ -1,3 +1,4 @@
+
 import {
   Avatar,
   Box,
@@ -24,6 +25,15 @@ const MealDeal = () => {
   if(!data.length){
     return <Heading>Loading...</Heading>
   }
+
+import React, { useEffect } from 'react'
+
+
+const MealDeal = () => {
+  useEffect(()=>{
+   document.title="Featured Meat-Free Deals & Vegetarian Food In Malaysia | KindMeal.my"
+  })
+
   return (
     <div className={styled.MealDealMain}>
       <div className={styled.Banner}>
