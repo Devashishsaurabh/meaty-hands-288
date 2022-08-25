@@ -16,7 +16,7 @@ padding-top: 8px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-width:60%;
+width:70%;
 margin: auto;
 @media(max-width: 968px) {
   width:80%;
