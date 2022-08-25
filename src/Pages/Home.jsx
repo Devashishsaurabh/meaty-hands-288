@@ -19,7 +19,10 @@ const Home = () => {
   const resto = useSelector((state) => state.AppReducer.Resto);
   const amazing = useSelector((state) => state.AppReducer.Amazing);
   const coupon = useSelector((state) => state.AppReducer.Coupon);
-
+  useEffect(() => {
+    document.title =
+      "Delicious Meat-Free Meals, Vegetarian Cuisines, Kind Meal Discount Coupons for Restaurants & Cafes in Malaysia | KindMeal.my";
+  });
   useEffect(() => {
     dispatch(getProductsData());
   }, [dispatch]);

@@ -14,6 +14,10 @@ import StarIcon from "@mui/icons-material/Star";
 import React, { useEffect, useState } from "react";
 import styled from "./Pages.module.css";
 const MealDeal = () => {
+
+  useEffect(()=>{
+    document.title="Featured Meat-Free Deals & Vegetarian Food In Malaysia | KindMeal.my"
+  })
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
