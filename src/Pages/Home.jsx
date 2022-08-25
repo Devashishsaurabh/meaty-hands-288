@@ -47,8 +47,18 @@ const Home = () => {
 
   return (
     <div>
-      <div className={style.body}style={{paddingBottom:"4%"}}>
-      <Slider />
+   <Slider />
+     <div className={style.upper}>
+     <div> <img src="https://www.kindmeal.my/photos/deal/5/574-3020-m.jpg" alt="" /> </div>
+     <div><img src="https://www.kindmeal.my/photos/deal/6/628-4921-m.jpg" alt="" /> </div>
+     <div><img src="https://www.kindmeal.my/photos/deal/4/467-2796-m.jpg" alt="" /> </div>
+     <div> <img src="https://www.kindmeal.my/photos/deal/6/614-3355-m.jpg" alt="" /></div>
+     <div><img src="https://www.kindmeal.my/photos/deal/5/590-3137-m.jpg" alt="" /></div>
+     <div><img src="https://www.kindmeal.my/photos/deal/6/644-3810-m.jpg" alt="" /></div>
+     <div> <img src="https://www.kindmeal.my/photos/deal/7/720-5195-m.jpg" alt="" /></div>
+     </div>
+     </div>
+      
 
       <div className={style.name}>
         <div className={style.first}>

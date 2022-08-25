@@ -26,6 +26,65 @@
 .namw:hover {
   color: black;
 }
+
+
+.namw:hover{
+    color: black;
+}
+.nameInside{
+    display: flex;
+    /* justify-items: end; */
+    gap: 30px;
+    margin-left: 23%;
+    color: #2184ff;
+    text-decoration: none;
+    font-weight: normal;
+    
+}
+.first{
+   display: flex;
+   justify-content: space-between;
+   text-decoration: none;
+   /* color: #666666;
+   font-weight: normal; */
+   margin: 0px 10px;
+   color: #666666;
+   font-weight: normal;
+
+   
+}
+.heading{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #666666;
+    text-align: center;
+}
+.img1{
+    height: 50px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    color: #666666;
+    font-weight: normal;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    margin-left: 37%;
+    gap: 20px;
+}
+.heading2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 26px;
+    color: #888888;
+    margin-top: 10px;
+
 .nameInside {
   display: flex;
   /* justify-items: end; */
@@ -104,6 +163,44 @@
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
 }
 
+
+.upper{
+    /* margin: auto; */
+    margin: auto;
+    display: flex;
+    gap: 4px;
+    width: 60%;
+    justify-content: center;
+    margin-bottom: 30px
+
+}
+
+
+.pehla{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    
+}
+.corner{
+    width: 10%;
+}
+
+.dusra{
+    width: 20%;
+
+}
+.tisra{
+    display: flex;
+    
+    /* height: 10%; */
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 10%;
+    
+    
+}
+
 .heading3 {
   text-align: center;
   margin:auto;
@@ -122,6 +219,7 @@
 .image {
   height: 75%;
 }
+
 
 @media all and (min-width: 380px) and (max-width: 700px) {
   .name {
