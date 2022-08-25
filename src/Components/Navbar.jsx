@@ -100,7 +100,7 @@ const BottomWrapper=styled.div`
     background-color:#2bb673;
 `
 const Content=styled.div`
-    width: 70%;
+    width: 60%;
     height:100%;
     display: flex;
     margin: auto;
