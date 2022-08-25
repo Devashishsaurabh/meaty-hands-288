@@ -23,6 +23,7 @@ const Login = ({ isOpen, onClose }) => {
   
   const handleSubmit=(e)=>{
     e.preventDefault()
+    console.log("happy")
     toast({
       title: 'Login Success.',
       description: "You Loging Successful",
@@ -30,7 +31,7 @@ const Login = ({ isOpen, onClose }) => {
       duration: 9000,
       isClosable: true,
     })
-    onClose={onClose}
+    navigate("/")
   }
   const handleChange=()=>{
 
@@ -52,7 +53,7 @@ const Login = ({ isOpen, onClose }) => {
           <Form onSubmit={handleSubmit}>
             <Input  width="65%" variant='outline' type={"email"} name="email" onChange={handleChange} placeholder="Your Email" isRequired/>
             <Input mt={3} width="65%" variant='outline' type={"password"} name="password" onChange={handleChange} placeholder="Your Password" isRequired/>
-            <Input mt={6} width="45%"type={"submit"} onClose={onClose} value="Login" fontSize={20} fontWeight={700} bg="#04be5a" color="#ffffff"/>
+            <Input mt={6} width="45%" type={"submit"} onClick={onClose} value="Login" fontSize={20} fontWeight={700} bg="#04be5a" color="#ffffff"/>
           </Form>
           <br/>
           <hr/>
@@ -69,9 +70,9 @@ const Login = ({ isOpen, onClose }) => {
          </Center>
          </a>
          <Box  display="flex" justifyContent='space-between' pb={3}>
-            <Button onClick={onClose}>Forgot Password ?</Button>
+            <Button bg="transparent" onClick={onClose}>Forgot Password ?</Button>
           
-            <Button onClick={onClose}>
+            <Button bg="transparent" onClick={onClose}>
               <p onClick={handlenavi}>
               Not a member? Sign up FREE!
               </p>
