@@ -21,6 +21,9 @@ const MealDeal = () => {
       .then((res) => setData(res.data));
   }, []);
   console.log(data);
+  if(!data.length){
+    return <Heading>Loading...</Heading>
+  }
   return (
     <div className={styled.MealDealMain}>
       <div className={styled.Banner}>
