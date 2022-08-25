@@ -13,11 +13,16 @@ import KindMoments from './KindMoments'
 import MealDeal from './MealDeal'
 import Recipes from './Recipes'
 import Signup from './Signup'
+<<<<<<< HEAD
 import Superhero from './Superhero'
+=======
+import Navbar from '../Components/Navbar'
+>>>>>>> 8fb997ca01fa1114cc67c49848a853862a3922fb
 
 const MainRoute = () => {
   return (
     <div>
+      <Navbar />
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mealdeal" element={<MealDeal />} />
