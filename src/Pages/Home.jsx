@@ -1,3 +1,5 @@
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 import React, { useEffect } from "react";
 import Slider from "../Components/Slider";
 import {
