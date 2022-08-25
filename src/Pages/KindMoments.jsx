@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import KindCard from "../Components/KindCard";
 import axios from "axios";
+import { SettingsOverscanOutlined } from "@mui/icons-material";
 
 const Top = styled.div`
   width: 100%;
@@ -168,6 +169,7 @@ const Box1 = styled.div`
 
 const KindMoments = () => {
   const [state, setState] = useState([]);
+  const[value,setValue]=useState([])
   useEffect(() => {
     document.title =
       "KindMoments, Saving Lives One Photo At A Time | KindMeal.my";
@@ -178,6 +180,19 @@ const KindMoments = () => {
       setState(data.data);
     });
   });
+
+  const handleSearch=async(e)=>{
+     e.preventDefault();
+     return await axios.get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
+     .then((response)=>{
+      setState(response.state)
+      setValue("");
+     })
+     .catch((err)=>{
+      console.log(err)
+     })
+     
+  }
 
   return (
     <>
@@ -223,14 +238,16 @@ const KindMoments = () => {
             <Button2>Following</Button2>
           </BottLeft>
           <BottRight>
-            <Input type="text" placeholder="Search user or Shop" />
+            <Input type="text" value={value}
+            onChange={(e)=>setValue(e.target.value)} 
+            placeholder="Search user or Shop" />
             <Select name="" id="">
               <option value="">All Locations</option>
               <option value="mumbai">Mumbai</option>
               <option value="hyderbad">Hyderabad</option>
               
             </Select>
-            <Button>Search</Button>
+            <Button onClick={()=>handleSearch} >Search</Button>
           </BottRight>
         </Bott>
         
