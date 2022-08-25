@@ -1,8 +1,14 @@
-import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import style from "./style.module.css"
+import React, { useEffect } from 'react'
+
 
 const Recipes = () => {
+
+  useEffect(()=>{
+    document.title="Yummy Meat-Free Recipes | KindMeal.my"
+  })
+ 
   return (
     <div className={style.recipe}>
       <div>

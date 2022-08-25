@@ -1,17 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import HelpRoute from "./HelpRoute";
 import styled from "./Pages.module.css";
-const Help = () => {
-  useEffect(()=>{
-    document.title="General Help | KindMeal.my"
-  })
+const Advertising = () => {
   return (
     <div className={styled.helpmain}>
       <div className={styled.sidebarMainLeft}>
         <HelpRoute />
       </div>
       <div className={styled.sidebarMainContent}>
-        <h2>General Help</h2>
+        <h2>Advertising</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident
           nihil nobis a, dolorem in sunt cumque reiciendis! Unde perferendis
@@ -40,6 +37,7 @@ const Help = () => {
         <br />
         <hr />
         <br />
+        <h2>Advertising Kinds</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas sit
           libero molestias harum facilis tenetur eius quaerat adipisci. Omnis
@@ -61,4 +59,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default Advertising;
