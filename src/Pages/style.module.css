@@ -1,5 +1,6 @@
 .body{
-    background: linear-gradient(to top,#eeeeee,#ffffff)
+    background: linear-gradient(to top,#eeeeee,#ffffff);
+    padding-bottom: 4%;
 }
 .name {
   width: 60%;
@@ -84,7 +85,7 @@
     font-size: 26px;
     color: #888888;
     margin-top: 10px;
-
+}
 .nameInside {
   display: flex;
   /* justify-items: end; */

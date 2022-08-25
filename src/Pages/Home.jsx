@@ -47,7 +47,9 @@ const Home = () => {
 
   return (
     <div>
-   <Slider />
+      <div className={style.body}>
+    <div >
+     <Slider />
      <div className={style.upper}>
      <div> <img src="https://www.kindmeal.my/photos/deal/5/574-3020-m.jpg" alt="" /> </div>
      <div><img src="https://www.kindmeal.my/photos/deal/6/628-4921-m.jpg" alt="" /> </div>
@@ -227,7 +229,7 @@ const Home = () => {
           })}
         </div>
       </div>
-     </div>
+      </div>
       <Heading className={style.heading}>
         Introducing The World's 1st Meat-Free Lifestyle Platform
       </Heading>
@@ -271,11 +273,8 @@ const Home = () => {
         dining exdiverience. Easily save animal lives, health, environment and
         money now!
       </div>
-
-      <br />
-      <br />
-    </div>
-  );
+      </div>
+  )
 };
 
 export default Home;
