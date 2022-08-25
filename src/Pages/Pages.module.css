@@ -1,15 +1,42 @@
-.helpmain{
+.helpmain {
     display: flex;
     text-align: center;
 }
-.helpmain>:nth-child(1){
-   width: 50%;
-   border-right: 1px solid red;
-   height: 100vh;
+.sidebarMainLeft{
+    width: 30%;
+    border-right:1px solid red ;
+    text-align: center;
 }
-.helpmain>:nth-child(2){
-    width: 100%;
+.sidebarMainContent{
+    width: 70%;
 }
-.helpcard{
-    border: 1px solid red;
+.HelpCard{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: 250px;
+    padding: 20px;
+    font-weight: bold;
+}
+.HelpCard>.active-link{
+    background: whitesmoke;
+}
+.sidebarMainContent{
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px;
+    text-align: left;
+    padding: 20px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+}
+.sidebarMainContent>h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.active-link>div{
+    background-color:whitesmoke
 }
