@@ -113,11 +113,11 @@ const SignupModal = ({ isOpen, onClose }) => {
           </Signupdivimg>
 
           <Box display="flex" justifyContent="space-between" pb={3}>
-            <Button border="none" bg="transparent" onClick={onClose}>
-              <p onClick={() => navigate("/login")}>Member Login</p>
+            <Button border="none" colorScheme="transparent" color="grey" onClick={onClose}>
+              <p onClick={onClose}>Member Login</p>
             </Button>
 
-            <Button bg="transparent" onClick={onClose}>
+            <Button colorScheme="transparent" color="grey" onClick={onClose}>
               <p>Forgot Password ?</p>
             </Button>
           </Box>
