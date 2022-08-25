@@ -22,7 +22,7 @@ const TopWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 60%;
   margin: auto;
   @media (max-width: 968px) {
     width: 80%;
