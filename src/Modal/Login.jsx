@@ -23,7 +23,7 @@ const Login = ({ isOpen, onClose }) => {
   
   const handleSubmit=(e)=>{
     e.preventDefault()
-    console.log("happy")
+ 
     toast({
       title: 'Login Success.',
       description: "You Loging Successful",

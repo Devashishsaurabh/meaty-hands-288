@@ -176,6 +176,10 @@ const Box1 = styled.div`
 const KindMoments = () => {
 
   const[state,setState]=useState([])
+  useEffect(()=>{
+    document.title="KindMoments, Saving Lives One Photo At A Time | KindMeal.my"
+  })
+    
   
   useEffect(()=>{
     axios.get("https://21wj24.sse.codesandbox.io/data").then((data)=>{

@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import { useToast } from '@chakra-ui/react'
+import React, { useEffect, useReducer} from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import styled from "styled-components"
+import { register } from '../Redux/AuthReducer/action'
 const Container=styled.div`
 margin-top:8px;
 background-color:#fcfcfc;
@@ -25,7 +28,7 @@ border : 1px solid grey;
 border-radius : 20px;
 margin-bottom : 35px;
 &:last-child{
-  height:280px;
+  height:auto;
 }
 &:nth-child(2){
   background-color:white;
@@ -122,28 +125,68 @@ const BBannerimg = styled.img`
   width: 100%;
   height : 100%;
 `
+const initialState={
+  name:"",
+  email:"",
+  re_enter_email:"",
+  password:"",
+  username:"",
+  birth:"",
+  country:"",
+  state:"",
+  gender:"",
+  profile_photo:"",
+
+};
+const reducer = (state, action) => {
+switch (action.type) {
+  case "name":
+    return { ...state, name: action.payload };
+  case "email":
+    return { ...state, email: action.payload };
+  case "password":
+    return { ...state, password: action.payload };
+  case "re_enter_email":
+    return {...state,re_enter_email:action.payload}
+  case "username":
+    return { ...state, username: action.payload };
+  case "birth":
+    return { ...state, birth: action.payload };
+    case "country":
+      return { ...state, country: action.payload };
+      case "state":
+        return { ...state, state: action.payload };
+        case "gender":
+          return { ...state, gender: action.payload };
+          case "profile_photo":
+            return { ...state, profile_photo: action.payload };
+  default:
+    return state;
+}
+};
+
 const Signup = () => {
-  let navigate = useNavigate();
-  const [formData,setFormData]=useState({
-      name:"",
-      email:"",
-      re_enter_email:"",
-      password:"",
-      username:"",
-      birth:"",
-      country:"",
-      state:"",
-      gender:"",
-      profile_photo:"",
-
+  // const toast = useToast()
+  const [state, setState] = useReducer(reducer, initialState);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  useEffect(()=>{
+    document.title="Sign Up For Delicious Discounted Meat-Free Meals | KindMeal.my"
   })
-  const handleChange=(e)=>{
-    
-    }
-
     const handleSubmit=(e)=>{
       e.preventDefault()
-      navigate("/")
+      console.log(state)
+      // dispatch(register(state)).then((r) => {
+      //   toast({
+      //     title: 'Account created.',
+      //     description: "We've created your account for you.",
+      //     status: 'success',
+      //     duration: 9000,
+      //     isClosable: true,
+      //   })
+      //   navigate("/", { replace: true });
+      // });
     }
 
   return (
@@ -226,7 +269,11 @@ const Signup = () => {
                           <InputP style={{marginLeft : "170px"}}>Last name</InputP>
                            </div>
                           <div style={{ display: "flex" }}>
-                              <Input onChange={handleChange} name="name" type="text" title="First name" />
+                          <Input name="name" type="text" title="First name" 
+                          value={state.name}
+                          onChange={(e) =>
+                             setState({ type: "name", payload: e.target.value })
+                          }/>
                               <Input name="lastname" style={{marginLeft:"10px"}} type="text" title="First name"/>
                           </div>
 
@@ -235,17 +282,29 @@ const Signup = () => {
                           <InputP>Your email must be correct to receive activation email</InputP>
                            </div>
                           <div style={{ display: "flex"}}>
-                              <Input onChange={handleChange} name="email" style={{width:"80%"}} type="email"/>
+                              <Input name="email" style={{width:"80%"}} type="email"
+                              value={state.email}
+                              onChange={(e) =>
+                                setState({ type: "email", payload: e.target.value })
+                             }/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex",}}>
-                              <Input name="re_enter_email" onChange={handleChange} style={{width:"80%"}} type="text"/>
+                              <Input name="re_enter_email"  style={{width:"80%"}} type="text"
+                              value={state.re_enter_email}
+                              onChange={(e) =>
+                                setState({ type: "re_enter_email", payload: e.target.value })
+                             }/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
-                              <Input onChange={handleChange} name="password" style={{width:"80%"}} type="password"/>
+                              <Input  name="password" style={{width:"80%"}} type="password"
+                              value={state.password}
+                              onChange={(e) =>
+                                setState({ type: "password", payload: e.target.value })
+                             }/>
                           </div>
 
                           <br />
@@ -253,7 +312,11 @@ const Signup = () => {
                           <InputP>Choose a cool username for your Personal Profile page, comments &amp; reviews</InputP>
                            </div>
                           <div style={{ display: "flex" }}>
-                              <Input onChange={handleChange} name="username" style={{width:"80%"}} type="text"/>
+                              <Input name="username" style={{width:"80%"}} type="text"
+                              value={state.username}
+                              onChange={(e) =>
+                                setState({ type: "username", payload: e.target.value })
+                             }/>
                           </div>
 
                           <br />
@@ -261,22 +324,37 @@ const Signup = () => {
                           <InputP>Only your age will be publicly visible</InputP>
                            </div>
                           <div style={{ display: "flex" }}>
-                              <Input name="birth" onChange={handleChange} style={{width:"80%"}} type="date" placeholder="Month/Day/Year"/>
+                              <Input name="birth" style={{width:"80%"}} type="date" placeholder="Month/Day/Year"
+                              value={state.birth}
+                              onChange={(e) =>
+                                setState({ type: "birth", payload: e.target.value })
+                             }/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
-                              <Input name="country" onChange={handleChange} style={{width:"80%"}} type="text" placeholder="Select Country"/>
+                              <Input name="country" style={{width:"80%"}} type="text" placeholder="Select Country"
+                              value={state.country}
+                              onChange={(e) =>
+                                setState({ type: "country", payload: e.target.value })
+                             }/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
-                              <Input name="state" onChange={handleChange} style={{width:"80%"}} type="text" placeholder="Select State"/>
+                              <Input name="state" style={{width:"80%"}} type="text" placeholder="Select State"
+                              value={state.state}
+                              onChange={(e) =>
+                                setState({ type: "state", payload: e.target.value })
+                             }/>
                           </div>
 
                           <br />
                           <div>
-                              <select name="gender" onChange={handleChange} style={{
+                              <select name="gender" 
+                              onChange={(e) =>
+                                setState({ type: "gender", payload: e.target.value })
+                             } style={{
                                   
                                   padding: "10px",
                                   border : "1px solid lightgrey",
@@ -289,7 +367,10 @@ const Signup = () => {
 
                           <br />
                           <div>
-                              <input name="profile_photo" onChange={handleChange} type="file" placeholder="Select Photo"></input>
+                              <input name="profile_photo"  type="file" placeholder="Select Photo"
+                              onChange={(e) =>
+                                setState({ type: "profile_photo", payload: e.target.value })
+                             }></input>
                           </div>
                           <div style={{ display: "flex", margin: "10px 0 0 0px" }}>
                           <input type="checkbox" />
