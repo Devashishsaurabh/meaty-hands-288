@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import style from "./style.module.css"
 import React, { useEffect } from 'react'
 
