@@ -1,53 +1,52 @@
 .helpmain {
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
 }
-.sidebarMainLeft{
-    width: 30%;
-    /* border-right:1px solid red ; */
-    text-align: center;
+.sidebarMainLeft {
+  width: 30%;
+  /* border-right:1px solid red ; */
+  text-align: center;
 }
-.sidebarMainContent{
-    width: 70%;
+.sidebarMainContent {
+  width: 70%;
 }
-.HelpCard{
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    margin: auto;
-    margin-top: 20px;
-    width: 250px;
-    padding: 20px;
-    font-weight: bold;
+.HelpCard {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  width: 250px;
+  padding: 20px;
+  font-weight: bold;
 }
-.HelpCard>.active-link{
-    background: whitesmoke;
+.HelpCard > .active-link {
+  background: whitesmoke;
 }
-.sidebarMainContent{
-    background-color: white;
-    border: 1px solid black;
-    margin: 20px;
-    text-align: left;
-    padding: 20px;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+.sidebarMainContent {
+  background-color: white;
+  border: 1px solid black;
+  margin: 20px;
+  text-align: left;
+  padding: 20px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+.sidebarMainContent > h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
 
-}
-.sidebarMainContent>h2{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.active-link>div{
-    background-color:whitesmoke
+.active-link > div {
+  background-color: whitesmoke;
 }
 
 /*  MealDeal page styling  */
 
-.Banner{
-    background: whitesmoke;
+.Banner {
+  background: whitesmoke;
 }
-.Banner>div{
-    width: 70%;
-    margin: auto;
-    padding: 20px;
+.Banner > div {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
 }
