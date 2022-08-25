@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/modal'
 import { Box,  Input, useToast} from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import { FaFacebook } from 'react-icons/fa';
 import { Button, Center, Text } from '@chakra-ui/react';
+import { useDispatch } from 'react-redux'
+import { login } from '../Redux/AuthReducer/action'
 
 const Logo=styled.img`
 @media only screen and (max-width:1150px){
@@ -18,23 +20,34 @@ const Form=styled.form`
  justify-content:center
 `
 const Login = ({ isOpen, onClose }) => {
+  const dispatch=useDispatch()
   const navigate=useNavigate()
-  const toast = useToast()
-  
+  const toast=useToast()
+  const [cred,setcred]=useState({
+    email:"",
+    password:""
+  })
   const handleSubmit=(e)=>{
     e.preventDefault()
- 
-    toast({
-      title: 'Login Success.',
-      description: "You Loging Successful",
-      status: 'success',
-      duration: 9000,
-      isClosable: true,
-    })
-    navigate("/")
+     dispatch(login(cred)).then((r)=>{
+      toast({
+        title: 'Login Success.',
+        description: "You Loging Successful",
+        status: 'success',
+        duration: 5000,
+        isClosable: true,
+      })
+      setcred({email:"",password:""})
+      navigate("/", { replace: true });
+     }).catch((e)=>{
+      
+     })
+    
   }
-  const handleChange=()=>{
-
+  const handleChange=(e)=>{
+   const name =e.target.name;
+   const value=e.target.value;
+    setcred((values)=> ({...values,[name]:value}))
   }
   const handlenavi=()=>{
      navigate("/signup")
@@ -53,7 +66,7 @@ const Login = ({ isOpen, onClose }) => {
           <Form onSubmit={handleSubmit}>
             <Input  width="65%" variant='outline' type={"email"} name="email" onChange={handleChange} placeholder="Your Email" isRequired/>
             <Input mt={3} width="65%" variant='outline' type={"password"} name="password" onChange={handleChange} placeholder="Your Password" isRequired/>
-            <Input mt={6} width="45%" type={"submit"} onClick={onClose} value="Login" fontSize={20} fontWeight={700} bg="#04be5a" color="#ffffff"/>
+            <Input cursor="pointer"mt={6} width="45%" type={"submit"} onClick={onClose} value="Login" fontSize={20} fontWeight={700} bg="#04be5a" color="#ffffff"/>
           </Form>
           <br/>
           <hr/>
