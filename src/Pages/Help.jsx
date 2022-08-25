@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HelpRoute from "./HelpRoute";
 import styled from "./Pages.module.css";
 const Help = () => {
+  useEffect(()=>{
+    document.title="General Help | KindMeal.my"
+  })
   return (
     <div className={styled.helpmain}>
       <div className={styled.sidebarMainLeft}>
