@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
 const HotPicks = () => {
-  return (
-    <div>HotPicks</div>
-  )
-}
+  useEffect(() => {
+    document.title = "Hot, Sizzling Member Picks | KindMeal.my";
+  });
+  return <div>HotPicks</div>;
+};
 
-export default HotPicks
+export default HotPicks;

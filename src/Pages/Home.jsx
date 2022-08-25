@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Heading, Box } from "@chakra-ui/react";
 
 import style from "./style.module.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,10 @@ const Home = () => {
   const amazing = useSelector((state) => state.AppReducer.Amazing);
   const coupon = useSelector((state) => state.AppReducer.Coupon);
 
+  useEffect(() => {
+    document.title =
+      "Delicious Meat-Free Meals, Vegetarian Cuisines, Kind Meal Discount Coupons for Restaurants & Cafes in Malaysia | KindMeal.my";
+  });
   useEffect(() => {
     dispatch(getProductsData());
   }, [dispatch]);
@@ -42,27 +47,29 @@ const Home = () => {
 
   return (
     <div>
+      <div className={style.body}style={{paddingBottom:"4%"}}>
       <Slider />
 
       <div className={style.name}>
         <div className={style.first}>
           Latest News & Videos
           <div className={style.nameInside}>
-            <h1>Save Lives with Your Blog </h1>
-            <div>.</div>
-            <h1>News & Articles </h1>
-            <div>.</div>
-            <h1>Follow Our Facebook</h1>
+            <h1 style={{color:"#2193ff"}}>Save Lives with Your Blog </h1>
+            <div style={{color:"#2193ff"}}>.</div>
+            <h1 style={{color:"#2193ff"}}>News & Articles </h1>
+            <div style={{color:"#2193ff"}}>.</div>
+            <h1 style={{color:"#2193ff"}}>Follow Our Facebook</h1>
           </div>
         </div>
 
         <div className={style.main}>
           {data.map((item) => {
             return (
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <Link to="/recipes">
+              <div style={{ display: "flex", flexDirection: "column",height:"100%" }}>
                 <div className={style.image}>
                   <img
-                    style={{ height: "100%", width: "100%" }}
+                    style={{ height: "100%", width: "100%",borderRadius:"4px" }}
                     src={item.image}
                     alt=""
                   />{" "}
@@ -77,6 +84,7 @@ const Home = () => {
                   {item.contain}{" "}
                 </div>
               </div>
+              </Link>
             );
           })}
         </div>
@@ -97,17 +105,18 @@ const Home = () => {
             <h1>Photo Moments</h1>
           </div>
         </div>
-
+        
         <div className={style.main}>
           {movement.map((item) => {
             return (
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <Link to="/mealdeal">
+              <div style={{ display: "flex", flexDirection: "column",height:"70%" }}>
                 <div className={style.image}>
                   <img
-                    style={{ height: "100%", width: "100%" }}
+                    style={{ height: "100%", width: "100%" ,borderRadius:"4px"}}
                     src={item.image}
                     alt=""
-                  />{" "}
+                  />
                 </div>
                 <div
                   style={{
@@ -119,6 +128,7 @@ const Home = () => {
                   {item.contain}{" "}
                 </div>
               </div>
+              </Link>
             );
           })}
         </div>
@@ -139,13 +149,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div className={style.main}>
+        <div className={style.main} >
           {resto.map((item) => {
             return (
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <Link to="/kindmoments">
+              <div style={{ display: "flex", flexDirection: "column",height:"100%" }}>
                 <div className={style.image}>
                   <img
-                    style={{ height: "100%", width: "100%" }}
+                    style={{ height: "100%", width: "100%",borderRadius:"4px" }}
                     src={item.image}
                     alt=""
                   />{" "}
@@ -160,12 +171,13 @@ const Home = () => {
                   {item.contain}{" "}
                 </div>
               </div>
+              </Link>
             );
           })}
         </div>
       </div>
       <br />
-      <div className={style.name}>
+      <div className={style.name} style={{height:"260px"}}>
         <div className={style.first}>
           Amazing Superheroes
           <div className={style.nameInside}>
@@ -181,10 +193,11 @@ const Home = () => {
           {/* <h1>Home Page  hai</h1> */}
           {amazing.map((item) => {
             return (
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <Link to="/hotpicks">
+              <div style={{ display: "flex", flexDirection: "column",height:"100%" }}>
                 <div className={style.image}>
                   <img
-                    style={{ height: "100%", width: "100%" }}
+                    style={{ height: "100%", width: "100%",borderRadius:"4px" }}
                     src={item.image}
                     alt=""
                   />{" "}
@@ -199,11 +212,12 @@ const Home = () => {
                   {item.contain}{" "}
                 </div>
               </div>
+              </Link>
             );
           })}
         </div>
       </div>
-
+     </div>
       <Heading className={style.heading}>
         Introducing The World's 1st Meat-Free Lifestyle Platform
       </Heading>
@@ -242,7 +256,8 @@ const Home = () => {
 
       <div className={style.heading3}>
         Any restaurant or cafe can join KindMeal, vegetarian or not, as long as
-        the deals and menu featured are meat-free. Enjoy a great meat-free
+        the deals and menu featured are meat-free. 
+        <br/>Enjoy a great meat-free
         dining exdiverience. Easily save animal lives, health, environment and
         money now!
       </div>
