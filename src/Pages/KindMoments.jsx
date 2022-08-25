@@ -242,28 +242,7 @@ const KindMoments = () => {
   )
 }
 
-      <Bott>
-        <BottLeft>
-          <Button3>Moments</Button3>
-          <Button2>Deal Reviews</Button2>
-          <Button2>Following</Button2>
-        </BottLeft>
-        <BottRight>
-          <Input type="text" placeholder="Search user or Shop" />
-          <Select name="" id="">
-            <option value="">All Locations</option>
-            <option value="">Mumbai</option>
-            <option value="">Hyderabad</option>
-            <option value="">kolkata</option>
-          </Select>
-          <Button>Search</Button>
-        </BottRight>
-      </Bott>
 
 
-      <KindCard res={state} />
-    </>
-  );
-};
 
 export default KindMoments;
