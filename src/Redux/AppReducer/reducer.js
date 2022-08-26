@@ -4,16 +4,19 @@ import {
   FAILURE2,
   FAILURE3,
   FAILURE4,
+  FAILURE5,
   REQUEST,
   REQUEST1,
   REQUEST2,
   REQUEST3,
   REQUEST4,
+  REQUEST5,
   SUCCESS,
   SUCCESS1,
   SUCCESS2,
   SUCCESS3,
   SUCCESS4,
+  SUCCESS5,
 } from "./actiontype";
 
 const initState = {
@@ -25,6 +28,7 @@ const initState = {
   Resto: [],
   Amazing: [],
   Coupon: [],
+  artical:[]
 };
 
 const reducer = (state = initState, { type, payload }) => {
@@ -142,6 +146,29 @@ const reducer = (state = initState, { type, payload }) => {
         isError: payload,
       };
     }
+
+        //// 5//////
+        case REQUEST5: {
+          return {
+            ...state,
+            isLoading: payload,
+          };
+        }
+        case SUCCESS5: {
+          return {
+            ...state,
+            data: payload,
+            isLoading: false,
+            artical: payload,
+          };
+        }
+        case FAILURE5: {
+          return {
+            ...state,
+            isError: payload,
+          };
+        }
+
 
     default: {
       return state;

@@ -4,16 +4,19 @@ import {
   FAILURE2,
   FAILURE3,
   FAILURE4,
+  FAILURE5,
   REQUEST,
   REQUEST1,
   REQUEST2,
   REQUEST3,
   REQUEST4,
+  REQUEST5,
   SUCCESS,
   SUCCESS1,
   SUCCESS2,
   SUCCESS3,
   SUCCESS4,
+  SUCCESS5,
 } from "./actiontype";
 import axios from "axios";
 function getProductsData() {
@@ -137,10 +140,40 @@ function getProductsData4() {
   };
 }
 
+
+
+  //////////////// 5th /////////////
+
+  function getProductsData5(p=1) {
+    return async (dispatch) => {
+      dispatch({
+        type: REQUEST5,
+        payload: true,
+      });
+      let data = await axios.get(`https://het4bs.sse.codesandbox.io/artical?_page=${p}&_limit=5`);
+      let ourData5 = data.data;
+      console.log("ourData:", ourData5);
+      if (data) {
+        dispatch({
+          type: SUCCESS5,
+          payload: ourData5,
+        });
+      } else {
+        dispatch({
+          type: FAILURE5,
+          payload: true,
+        });
+      }
+    };
+  }
+  
+
+
 export {
   getProductsData,
   getProductsData1,
   getProductsData2,
   getProductsData3,
   getProductsData4,
+  getProductsData5
 };
