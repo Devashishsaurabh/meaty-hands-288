@@ -119,7 +119,7 @@ const Home = () => {
           {movement.map((item) => {
             return (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <div className={style.image}>
+                <div style={{height:"56%"}} className={style.image}>
                   <img
                     style={{ height: "100%", width: "100%" }}
                     src={item.image}
@@ -265,6 +265,28 @@ const Home = () => {
         dining exdiverience. Easily save animal lives, health, environment and
         money now!
       </div>
+
+              <div className={style.heading4}> <button> Join KindMeal Now </button>
+              <p className={style.heading5}>Your tasty journey begins here</p>
+                        </div>
+                        
+
+           
+
+            <div className={style.lower}>
+            <div >As Featured In</div>
+                <div className={style.lower2} ><img src="https://www.kindmeal.my/images/media-feature2.png" alt="" /></div>
+                
+            </div>
+             
+             <div>
+          
+          
+           <div className={style.lower4} ><img className={style.lower3} src="https://www.kindmeal.my/images/banner_whykindmeal.png" alt="" /></div>
+             </div>
+             <br />
+             <br />
+
       </div>
   )
 };

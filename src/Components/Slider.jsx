@@ -49,7 +49,7 @@ const Slider = () => {
 export default Slider;
 
 const Container = styled.div`
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 `;
 const Wrapper = styled.div`
   width: 60%;
