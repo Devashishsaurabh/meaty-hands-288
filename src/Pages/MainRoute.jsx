@@ -16,7 +16,11 @@ import Signup from "./Signup";
 import Superhero from "./Superhero";
 import Navbar from "../Components/Navbar";
 import Logout from "./Logout";
+
 import Article  from "./Articles";
+
+import Footer from "../Components/Footer";
+
 
 const MainRoute = () => {
   const location = useLocation();
@@ -60,6 +64,7 @@ const MainRoute = () => {
           }
         />
       </Routes>
+      <Footer/>
     </div>
   );
 };

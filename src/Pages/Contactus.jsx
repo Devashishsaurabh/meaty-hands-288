@@ -1,8 +1,11 @@
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import HelpRoute from "./HelpRoute";
 import styled from "./Pages.module.css";
 const Contactus = () => {
+  useEffect(()=>{
+    document.title="Contact-US"
+  })
   return (
     <div className={styled.helpmain}>
       <div className={styled.sidebarMainLeft}>
