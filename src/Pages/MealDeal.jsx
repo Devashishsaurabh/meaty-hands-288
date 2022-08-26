@@ -25,11 +25,11 @@ const MealDeal = () => {
       .then((res) => setData(res.data));
   }, []);
   console.log(data);
-  if (!data.length) {
-    return <Heading>Loading...</Heading>;
-  }
+  
   return (
     <div className={styled.MealDealMain}>
+     {!data.length ? <Heading style={{textAlign:"center",height:"600px"}}>Loading...</Heading>
+     :
       <div className={styled.Banner}>
         <div>
           <Heading as="h5" size="md">
@@ -68,7 +68,7 @@ const MealDeal = () => {
             </Box>
           ))}
         </SimpleGrid>
-      </div>
+      </div>}
     </div>
   );
 };
