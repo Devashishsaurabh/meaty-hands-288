@@ -11,6 +11,27 @@ const Recipes = () => {
   return (
     
     <div >
+     
+            <div>
+              <div>Food & Drinks</div>
+              <div>Yummy Meat-Free Recipes</div>
+            </div>
+              <div>
+              Want to craft your own creative meat-free meals? Get inspiration from other food lovers, or share your own masterpieces!
+              </div>
+              <div>Transform into a master chef now.</div>
+<div>
+              <div className={style.food}><input className={style.food1} type="text" placeholder="Search Recipe or Name" /> 
+               <div className={style.food3}><select> <option value="">ALL Categories</option>
+               <option value="">Appetizers</option>
+               <option value="">Bevarages</option>
+               
+               </select>
+                 
+               
+                </div>
+              </div>
+              </div>
       <div className= {style.recipe}>
       <div >
       <div className={style.pehla}>

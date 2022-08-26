@@ -119,7 +119,7 @@ const Home = () => {
           {movement.map((item) => {
             return (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <div className={style.image}>
+                <div style={{height:"56%"}} className={style.image}>
                   <img
                     style={{ height: "100%", width: "100%" }}
                     src={item.image}
