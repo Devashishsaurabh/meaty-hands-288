@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HelpRoute from "./HelpRoute";
 import styled from "./Pages.module.css";
 const Advertising = () => {
+  useEffect(()=>{
+    document.title="Advertisement"
+  })
   return (
     <div className={styled.helpmain}>
       <div className={styled.sidebarMainLeft}>

@@ -359,13 +359,14 @@
 .lower3{
     
     /* font-size: 14px; */
-    margin-left: 22%;
+ margin:auto;
    
 }
 .lower4{
-     /* margin-left: 22%; */
+     /* margin-left: 22%;' */
      margin: auto;
      background-color: #ECECEC;
+     margin-bottom: -48px;
      
 }
 .heading4{
