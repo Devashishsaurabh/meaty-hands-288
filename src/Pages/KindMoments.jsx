@@ -3,6 +3,7 @@ import styled from "styled-components";
 import KindCard from "../Components/KindCard";
 import axios from "axios";
 import { SettingsOverscanOutlined } from "@mui/icons-material";
+import { useSearchParams } from "react-router-dom";
 
 const Top = styled.div`
   width: 100%;
@@ -170,6 +171,10 @@ const Box1 = styled.div`
 const KindMoments = () => {
   const [state, setState] = useState([]);
   const[value,setValue]=useState([])
+  const[searchParams,setSearchParams]=useSearchParams()
+  const initialLocationParams=searchParams.getAll('location')
+  const[location,setLocation]=useState(initialLocationParams || [])
+  
   useEffect(() => {
     document.title =
       "KindMoments, Saving Lives One Photo At A Time | KindMeal.my";
@@ -192,6 +197,18 @@ const KindMoments = () => {
       console.log(err)
      })
      
+  }
+
+  const handleLocationChange=(e)=>{
+    const option=e.target.value;
+    let newLocation=[...location]
+    if(location.includes(option)){
+      newLocation.splice(newLocation.indexOf(option),1)
+    }
+    else{
+      newLocation.push(option)
+    }
+    setLocation(newLocation)
   }
 
   return (
@@ -243,8 +260,8 @@ const KindMoments = () => {
             placeholder="Search user or Shop" />
             <Select name="" id="">
               <option value="">All Locations</option>
-              <option value="mumbai">Mumbai</option>
-              <option value="hyderbad">Hyderabad</option>
+              <option value="Mumbai" onChange={handleLocationChange} defaultChecked={location.includes('Mumbai')}>Mumbai</option>
+              <option value="Hyderbad"  onChange={handleLocationChange} defaultChecked={location.includes('Hyderabad')}>Hyderabad</option>
               
             </Select>
             <Button onClick={()=>handleSearch} >Search</Button>
