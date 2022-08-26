@@ -16,6 +16,7 @@ import Signup from "./Signup";
 import Superhero from "./Superhero";
 import Navbar from "../Components/Navbar";
 import Logout from "./Logout";
+import Article  from "./Articles";
 
 const MainRoute = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const MainRoute = () => {
         <Route path="/kindmoments" element={<KindMoments />} />
         <Route path="/hotpicks" element={<HotPicks />}></Route>
         <Route path="/recipes" element={<Recipes />}></Route>
+        <Route path="/articles" element={<Article />}></Route>
         <Route path="/help" element={<Help />}></Route>
         <Route path="/help_merchant" element={<HelpMerchant />} />
         <Route path="/about-us" element={<About />} />
