@@ -167,13 +167,49 @@ const Box1 = styled.div`
   margin-left: 200px;
   margin-top: 50px;
 `;
+const Pagination=styled.div`
+  width:70%;
+  border:1px solid black;
+  height:30px;
+  font-size:16px;
+  justify-content:space-between;
+  margin:auto;
+  display:flex;
+`;
+
+const PageNum =styled.div`
+display:flex;
+margin-left:-67%;
+
+`;
+const Num=styled.div`
+height:20px;
+width:20px;
+border:1px solid red;
+font-size:10px;
+padding:2px 5px 2px 5px;
+margin:3px;
+
+`;
+const PButton=styled.div`
+  font-size:12px;
+  border:1px solid blue;
+  height:20px;
+  width:40px;
+  justify-content:center;
+`
+
+
+
+
 
 const KindMoments = () => {
-  const [state, setState] = useState([]);
-  const[value,setValue]=useState([])
-  const[searchParams,setSearchParams]=useSearchParams()
-  const initialLocationParams=searchParams.getAll('location')
-  const[location,setLocation]=useState(initialLocationParams || [])
+  const [state, setState] = useState([])
+  const[search,setSearch]=useState("")
+  const[find,setFind]=useState("")
+  const[pageNumber,setPageNumber]=useState(1)
+  
+  
   
   useEffect(() => {
     document.title =
@@ -181,35 +217,23 @@ const KindMoments = () => {
   });
 
   useEffect(() => {
-    axios.get("https://21wj24.sse.codesandbox.io/data").then((data) => {
-      setState(data.data);
+    axios.get("https://21wj24.sse.codesandbox.io/data?_page=${pageNumber}&_limit=8").then((data) => {
+      //setState(data.data);
+      if(find===""){
+        setState(data.data)
+      }
+      else{
+        setState(data.data.filter((item)=>item.location.includes(find)))
+      }
+      
+      
     });
-  });
+  },[pageNumber]);
 
-  const handleSearch=async(e)=>{
-     e.preventDefault();
-     return await axios.get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
-     .then((response)=>{
-      setState(response.state)
-      setValue("");
-     })
-     .catch((err)=>{
-      console.log(err)
-     })
-     
-  }
+  console.log(state)
 
-  const handleLocationChange=(e)=>{
-    const option=e.target.value;
-    let newLocation=[...location]
-    if(location.includes(option)){
-      newLocation.splice(newLocation.indexOf(option),1)
-    }
-    else{
-      newLocation.push(option)
-    }
-    setLocation(newLocation)
-  }
+
+  
 
   return (
     <>
@@ -255,21 +279,44 @@ const KindMoments = () => {
             <Button2>Following</Button2>
           </BottLeft>
           <BottRight>
-            <Input type="text" value={value}
-            onChange={(e)=>setValue(e.target.value)} 
+            <Input type="text" 
+            onChange={(e)=>setSearch(e.target.value)} 
             placeholder="Search user or Shop" />
-            <Select name="" id="">
+            <Select onChange={(e)=>setFind(e.target.value)}name="" id="">
               <option value="">All Locations</option>
-              <option value="Mumbai" onChange={handleLocationChange} defaultChecked={location.includes('Mumbai')}>Mumbai</option>
-              <option value="Hyderbad"  onChange={handleLocationChange} defaultChecked={location.includes('Hyderabad')}>Hyderabad</option>
+              <option value="Mumbai" >Mumbai</option>
+              <option value="Hyderabad">Hyderabad</option>
               
             </Select>
-            <Button onClick={()=>handleSearch} >Search</Button>
+            <Button >Search</Button>
           </BottRight>
         </Bott>
         
+
+        <Pagination>
+        <p style={{ fontSize: "16px" }}>Page : </p>
+        <PageNum>
+          <Num onClick={() => setPageNumber(1)}>1</Num>
+          <Num onClick={() => setPageNumber(2)}>2</Num>
+          <Num onClick={() => setPageNumber(3)}>3</Num>
+          <Num onClick={() => setPageNumber(4)}>4</Num>
+          <Num onClick={() => setPageNumber(5)}>5</Num>
+          <Num onClick={() => setPageNumber(6)}>6</Num>
+          <Num onClick={() => setPageNumber(7)}>7</Num>
+          <Num onClick={() => setPageNumber(8)}>8</Num>
+          <Num onClick={() => setPageNumber(9)}>9</Num>
+          
+        </PageNum>
+        
+          
+          <PButton onClick={() => setPageNumber(pageNumber + 1)}>
+            Next »
+          </PButton>
+        
+      </Pagination>
+        
        
-        <KindCard res={state}/>
+        <KindCard res={state} query={search} />
     
      </>
     
