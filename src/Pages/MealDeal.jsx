@@ -26,7 +26,7 @@ const MealDeal = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://21wj24.sse.codesandbox.io/data")
+      .get("https://ic3h4i.sse.codesandbox.io/data")
       .then((res) => setData(res.data));
   }, []);
   return (
