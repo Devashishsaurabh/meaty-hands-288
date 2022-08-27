@@ -338,3 +338,4 @@ const KindMoments = () => {
     
   )
 }
+export default KindMoments;
