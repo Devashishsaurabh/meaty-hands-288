@@ -199,15 +199,8 @@ const PButton=styled.div`
   justify-content:center;
 `
 
-
-
-
-
 const KindMoments = () => {
-
-  const [state, setState] = useState([]);
   const [value, setValue] = useState([]);
-
   const [state, setState] = useState([])
   const[search,setSearch]=useState("")
   const[find,setFind]=useState("")
@@ -247,10 +240,6 @@ const KindMoments = () => {
   };
 
   console.log(state)
-
-
- 
-
   return (
     <>
       <Top>
@@ -326,71 +315,4 @@ const KindMoments = () => {
     </>
   );
 };
-
- 
-        <Bott>
-          <BottLeft>
-            <Button3>Moments</Button3>
-            <Button2>Deal Reviews</Button2>
-            <Button2>Following</Button2>
-          </BottLeft>
-          <BottRight>
-            <Input type="text" 
-            onChange={(e)=>setSearch(e.target.value)} 
-            placeholder="Search user or Shop" />
-            <Select onChange={(e)=>setFind(e.target.value)}name="" id="">
-              <option value="">All Locations</option>
-              <option value="Mumbai" >Mumbai</option>
-              <option value="Hyderabad">Hyderabad</option>
-              
-            </Select>
-            <Button >Search</Button>
-          </BottRight>
-        </Bott>
-        
-
-        <Pagination>
-        <p style={{ fontSize: "16px" }}>Page : </p>
-        <PageNum>
-          <Num onClick={() => setPageNumber(1)}>1</Num>
-          <Num onClick={() => setPageNumber(2)}>2</Num>
-          <Num onClick={() => setPageNumber(3)}>3</Num>
-          <Num onClick={() => setPageNumber(4)}>4</Num>
-          <Num onClick={() => setPageNumber(5)}>5</Num>
-          <Num onClick={() => setPageNumber(6)}>6</Num>
-          <Num onClick={() => setPageNumber(7)}>7</Num>
-          <Num onClick={() => setPageNumber(8)}>8</Num>
-          <Num onClick={() => setPageNumber(9)}>9</Num>
-          
-        </PageNum>
-        
-          
-          <PButton onClick={() => setPageNumber(pageNumber + 1)}>
-            Next »
-          </PButton>
-        
-      </Pagination>
-        
-       
-        <KindCard res={state} query={search} />
-        {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
-  thickness='4px'
-  speed='1s'
-  emptyColor='gray.200'
-  color='blue.600'
-  size='xl'
-  mt="20px"/>
-  <Heading>Loading...</Heading>
-  </Heading>
-  :
-       
-        <KindCard res={state}/>
-  }
-    
-     </>
-    
-  )
-}
-
-
 export default KindMoments;
