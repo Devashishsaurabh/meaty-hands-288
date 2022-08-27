@@ -25,4 +25,10 @@ export const REQUEST5 = 'REQUEST5';
 export const SUCCESS5 = 'SUCCESS5';
 export const FAILURE5 = 'FAILURE5';
 
+
+
+export const REQUEST6 = 'REQUEST6';
+export const SUCCESS6 = 'SUCCESS6';
+export const FAILURE6 = 'FAILURE6';
+
   

@@ -20,6 +20,7 @@ import Logout from "./Logout";
 import Article  from "./Articles";
 
 import Footer from "../Components/Footer";
+import Directory from "./Directory";
 
 
 const MainRoute = () => {
@@ -39,6 +40,7 @@ const MainRoute = () => {
         <Route path="/hotpicks" element={<HotPicks />}></Route>
         <Route path="/recipes" element={<Recipes />}></Route>
         <Route path="/articles" element={<Article />}></Route>
+        <Route path="/directory" element={<Directory />}></Route>
         <Route path="/help" element={<Help />}></Route>
         <Route path="/help_merchant" element={<HelpMerchant />} />
         <Route path="/about-us" element={<About />} />
