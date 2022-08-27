@@ -601,14 +601,3 @@
     display: block;
  }
 
-@media all and (min-width: 380px) and (max-width: 700px) {
-  .name {
-    width: 100%;
-  }
-}
-
-@media all and (min-width: 50px) and(max-width:379px) {
-  .name {
-    width: 100%;
-  }
-}
