@@ -365,7 +365,7 @@ const Navbar = () => {
             <Nav>Recipes</Nav>
           </NavLink>
           <NavLink
-            to={"*"}
+            to={"/directory"}
             exact
             style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
           >

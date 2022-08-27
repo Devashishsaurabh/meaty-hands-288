@@ -70,13 +70,14 @@ const Title = styled.div`
   color: gray;
 `;
 
-const KindCard = ({ res }) => {
+const KindCard = ({ res,query }) => {
   return (
     <>
       <Container>
-        {res.map((e) => {
+        
+        {res.filter((item)=>item.username.toLowerCase().includes(query)).map((e)=> {
           return (
-            <Mainbox>
+            <Mainbox key={e.id}>
               <Topsection>
                 <ProfileImage src={e.avatar} />
                 <NameDate>
