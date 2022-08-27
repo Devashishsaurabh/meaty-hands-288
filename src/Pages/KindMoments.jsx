@@ -229,7 +229,7 @@ const KindMoments = () => {
   const handleSearch = async (e) => {
     e.preventDefault();
     return await axios
-      .get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
+      .get(`https://ic3h4i.sse.codesandbox.io/data?q=${value}`)
       .then((response) => {
         setState(response.state);
         setValue("");
