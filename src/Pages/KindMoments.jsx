@@ -295,18 +295,7 @@ const KindMoments = () => {
 
         <Pagination>
         <p style={{ fontSize: "16px" }}>Page : </p>
-        <PageNum>
-          <Num onClick={() => setPageNumber(1)}>1</Num>
-          <Num onClick={() => setPageNumber(2)}>2</Num>
-          <Num onClick={() => setPageNumber(3)}>3</Num>
-          <Num onClick={() => setPageNumber(4)}>4</Num>
-          <Num onClick={() => setPageNumber(5)}>5</Num>
-          <Num onClick={() => setPageNumber(6)}>6</Num>
-          <Num onClick={() => setPageNumber(7)}>7</Num>
-          <Num onClick={() => setPageNumber(8)}>8</Num>
-          <Num onClick={() => setPageNumber(9)}>9</Num>
-          
-        </PageNum>
+        
         
           
           <PButton onClick={() => setPageNumber(pageNumber + 1)}>
