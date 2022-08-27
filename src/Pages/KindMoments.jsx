@@ -3,6 +3,7 @@ import styled from "styled-components";
 import KindCard from "../Components/KindCard";
 import axios from "axios";
 import { SettingsOverscanOutlined } from "@mui/icons-material";
+import { Heading, Spinner } from "@chakra-ui/react";
 
 const Top = styled.div`
   width: 100%;
@@ -250,9 +251,19 @@ const KindMoments = () => {
             <Button onClick={()=>handleSearch} >Search</Button>
           </BottRight>
         </Bott>
-        
+        {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
+  thickness='4px'
+  speed='1s'
+  emptyColor='gray.200'
+  color='blue.600'
+  size='xl'
+  mt="20px"/>
+  <Heading>Loading...</Heading>
+  </Heading>
+  :
        
         <KindCard res={state}/>
+  }
     
      </>
     
