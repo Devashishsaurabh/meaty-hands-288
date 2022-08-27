@@ -7,6 +7,7 @@ import {
   Image,
   SimpleGrid,
   Spacer,
+  Spinner,
   Text,
 } from "@chakra-ui/react";
 import axios from "axios";
@@ -28,7 +29,15 @@ const MealDeal = () => {
   
   return (
     <div className={styled.MealDealMain}>
-     {!data.length ? <Heading style={{textAlign:"center",height:"600px"}}>Loading...</Heading>
+     {!data.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
+  thickness='4px'
+  speed='1s'
+  emptyColor='gray.200'
+  color='blue.600'
+  size='xl'
+  mt="20px"/>
+  <h1>Loading...</h1>
+  </Heading>
      :
       <div className={styled.Banner}>
         <div>
