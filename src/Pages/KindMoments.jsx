@@ -4,7 +4,7 @@ import KindCard from "../Components/KindCard";
 import axios from "axios";
 import { SettingsOverscanOutlined } from "@mui/icons-material";
 import { useSearchParams } from "react-router-dom";
-
+import { Heading, Spinner } from "@chakra-ui/react";
 const Top = styled.div`
   width: 100%;
   height: 300px;
@@ -317,6 +317,19 @@ const KindMoments = () => {
         
        
         <KindCard res={state} query={search} />
+        {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
+  thickness='4px'
+  speed='1s'
+  emptyColor='gray.200'
+  color='blue.600'
+  size='xl'
+  mt="20px"/>
+  <Heading>Loading...</Heading>
+  </Heading>
+  :
+       
+        <KindCard res={state}/>
+  }
     
      </>
     
