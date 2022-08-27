@@ -199,15 +199,8 @@ const PButton=styled.div`
   justify-content:center;
 `
 
-
-
-
-
 const KindMoments = () => {
-
-  const [state, setState] = useState([]);
   const [value, setValue] = useState([]);
-
   const [state, setState] = useState([])
   const[search,setSearch]=useState("")
   const[find,setFind]=useState("")
@@ -220,14 +213,14 @@ const KindMoments = () => {
   });
 
   useEffect(() => {
-    axios.get("https://21wj24.sse.codesandbox.io/data?_page=${pageNumber}&_limit=8").then((data) => {
+    axios.get("https://ic3h4i.sse.codesandbox.io/data?_page=${pageNumber}&_limit=8").then((data) => {
       //setState(data.data);
-      if(find===""){
+     if(find===""){
         setState(data.data)
       }
-      else{
-        setState(data.data.filter((item)=>item.location.includes(find)))
-      }
+       else{
+         setState(data.data.filter((item)=>item.location.includes(find)))
+       }
       
       
     });
@@ -236,7 +229,7 @@ const KindMoments = () => {
   const handleSearch = async (e) => {
     e.preventDefault();
     return await axios
-      .get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
+      .get(`https://ic3h4i.sse.codesandbox.io/data?q=${value}`)
       .then((response) => {
         setState(response.state);
         setValue("");
@@ -247,10 +240,6 @@ const KindMoments = () => {
   };
 
   console.log(state)
-
-
- 
-
   return (
     <>
       <Top>
@@ -286,47 +275,6 @@ const KindMoments = () => {
           </Box>
         </Topright>
       </Top>
-
-      <Bott>
-        <BottLeft>
-          <Button3>Moments</Button3>
-          <Button2>Deal Reviews</Button2>
-          <Button2>Following</Button2>
-        </BottLeft>
-        <BottRight>
-          <Input
-            type="text"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="Search user or Shop"
-          />
-          <Select name="" id="">
-            <option value="">All Locations</option>
-            <option value="mumbai">Mumbai</option>
-            <option value="hyderbad">Hyderabad</option>
-          </Select>
-          <Button onClick={() => handleSearch}>Search</Button>
-        </BottRight>
-      </Bott>
-      {!state.length ? (
-        <Heading style={{ textAlign: "center", height: "600px" }}>
-          <Spinner
-            thickness="4px"
-            speed="1s"
-            emptyColor="gray.200"
-            color="blue.600"
-            size="xl"
-            mt="20px"
-          />
-          <Heading>Loading...</Heading>
-        </Heading>
-      ) : (
-        <KindCard res={state} />
-      )}
-    </>
-  );
-};
-
  
         <Bott>
           <BottLeft>
@@ -360,8 +308,7 @@ const KindMoments = () => {
         
       </Pagination>
         
-       
-        <KindCard res={state} query={search} />
+        
         {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
   thickness='4px'
   speed='1s'
@@ -373,13 +320,11 @@ const KindMoments = () => {
   </Heading>
   :
        
-        <KindCard res={state}/>
+  <KindCard res={state} query={search} />
   }
     
      </>
     
   )
 }
-
-
 export default KindMoments;

@@ -10,30 +10,27 @@ const Wrapper = styled.div`
   width: 70%;
   margin: auto;
   
-`;
+`
 const Top = styled.div`
 display: flex;
 justify-content: space-between;
-`;
-
+`
 const Col = styled.div`
 display: flex;
 flex-direction: column;
 font-size: 12px;
 flex: 1;
-
-`;
+`
 const Heading=styled.p`
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 15px;
   color: white;
 `
-
 const Bottom = styled.div`
 text-align: center;
 margin-top: 30px;
-`;
+`
 
 const Item=styled.p`
   font-size:12px;

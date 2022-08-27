@@ -9,19 +9,16 @@ import Help from "./Help";
 import HelpMerchant from "./HelpMerchant";
 import Home from "./Home";
 import HotPicks from "./HotPicks";
-import KindMoments from "./KindMoments";
+import KindMoments from "./KindMoments"
 import MealDeal from "./MealDeal";
 import Recipes from "./Recipes";
 import Signup from "./Signup";
 import Superhero from "./Superhero";
 import Navbar from "../Components/Navbar";
 import Logout from "./Logout";
-
 import Article  from "./Articles";
-
-import Footer from "../Components/Footer";
 import Directory from "./Directory";
-
+import Footer from "../Components/Footer"
 
 const MainRoute = () => {
   const location = useLocation();
@@ -36,7 +33,7 @@ const MainRoute = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mealdeal" element={<MealDeal />} />
-        <Route path="/kindmoments" element={<KindMoments />} />
+        <Route path="/kindmoments" element={<KindMoments/>} />
         <Route path="/hotpicks" element={<HotPicks />}></Route>
         <Route path="/recipes" element={<Recipes />}></Route>
         <Route path="/articles" element={<Article />}></Route>
@@ -66,7 +63,7 @@ const MainRoute = () => {
           }
         />
       </Routes>
-      <Footer/>
+    <Footer/>
     </div>
   );
 };
