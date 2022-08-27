@@ -3,6 +3,8 @@ import styled from "styled-components";
 import FavoriteTwoToneIcon from "@mui/icons-material/FavoriteTwoTone";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+import Pagination from "../Pages/Pagination"
+
 
 const Container = styled.div`
   display: grid;
@@ -73,6 +75,9 @@ const Title = styled.div`
 const KindCard = ({ res,query }) => {
   return (
     <>
+    <div style={{width:"70%",margin:"auto"}}>
+    <Pagination/>
+    </div>
       <Container>
         
         {res.filter((item)=> item.location.includes(query)).map((e)=> {
@@ -99,6 +104,7 @@ const KindCard = ({ res,query }) => {
           );
         })}
       </Container>
+      
     </>
   );
 };
