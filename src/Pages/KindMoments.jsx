@@ -199,10 +199,6 @@ const PButton=styled.div`
   justify-content:center;
 `
 
-
-
-
-
 const KindMoments = () => {
   const [state, setState] = useState([])
   const[search,setSearch]=useState("")
@@ -217,14 +213,14 @@ const KindMoments = () => {
   });
 
   useEffect(() => {
-    axios.get("https://21wj24.sse.codesandbox.io/data?_page=${pageNumber}&_limit=8").then((data) => {
+    axios.get("https://ic3h4i.sse.codesandbox.io/data?_page=${pageNumber}&_limit=8").then((data) => {
       //setState(data.data);
-      if(find===""){
+     if(find===""){
         setState(data.data)
       }
-      else{
-        setState(data.data.filter((item)=>item.location.includes(find)))
-      }
+       else{
+         setState(data.data.filter((item)=>item.location.includes(find)))
+       }
       
       
     });
@@ -316,7 +312,7 @@ const KindMoments = () => {
       </Pagination>
         
        
-        <KindCard res={state} query={search} />
+        
         {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
   thickness='4px'
   speed='1s'
@@ -328,7 +324,7 @@ const KindMoments = () => {
   </Heading>
   :
        
-        <KindCard res={state}/>
+  <KindCard res={state} query={search} />
   }
     
      </>

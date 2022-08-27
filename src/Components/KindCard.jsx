@@ -75,7 +75,7 @@ const KindCard = ({ res,query }) => {
     <>
       <Container>
         
-        {res.filter((item)=>item.username.toLowerCase().includes(query)).map((e)=> {
+        {res.filter((item)=> item.location.includes(query)).map((e)=> {
           return (
             <Mainbox key={e.id}>
               <Topsection>
