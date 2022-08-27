@@ -36,6 +36,19 @@ function Articles() {
       }, [dispatch,mpage]);
   return (
     <div>
+        <div style={{backgroundColor:"#F0F0F0"}}>
+        <div style={{ paddingLeft:"20%",paddingTop:"30px",width:"70%"}}>
+       
+
+          <div style={{fontSize:"28px",fontWeight:"normal",marginBottom:"10px",color:"#444444"}}> Yummy News, Articles & Videos</div>
+          <br />
+          <p>Want to keep updated on the latest news of delicious meat-free meals and adorable animals? Check out this section for interesting daily happenings and articles that will melt your tummy (and heart too).</p>
+          <br />
+          <p>You can also follow our Facebook Page or Twitter for more news and updates.</p>
+          <br />
+          <br />
+        </div>
+        </div>
       
       <div style={{width: '50%', margin:"auto",display: "flex",marginBottom:"1rem",marginTop:"1rem",marginLeft:"19%"}}>
                 
@@ -50,7 +63,7 @@ function Articles() {
                   <Button disabled={mpage===4}
                  onClick={()=>changepage(4)}>4</Button>
                   <Button disabled={mpage===5}
-                 onClick={()=>changepage(4)}>5</Button>
+                 onClick={()=>changepage(5)}>5</Button>
                 </Flex>
             </div>
 
@@ -63,7 +76,7 @@ function Articles() {
               <div className={style.dono} key={item.id} >
                 <div className={style.image1}>
                   <img
-                    
+                    style={{height:"100%",width:"100%", borderTopLeftRadius:"5px",borderBottomLeftRadius:"5px"}}
                     src={item.image}
                     alt=""
                   />{" "}
