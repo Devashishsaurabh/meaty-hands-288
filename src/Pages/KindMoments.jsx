@@ -5,6 +5,7 @@ import axios from "axios";
 import { SettingsOverscanOutlined } from "@mui/icons-material";
 import { useSearchParams } from "react-router-dom";
 import { Heading, Spinner } from "@chakra-ui/react";
+
 const Top = styled.div`
   width: 100%;
   height: 300px;
@@ -167,37 +168,8 @@ const Box1 = styled.div`
   margin-left: 200px;
   margin-top: 50px;
 `;
-const Pagination=styled.div`
-  width:70%;
-  border:1px solid black;
-  height:30px;
-  font-size:16px;
-  justify-content:space-between;
-  margin:auto;
-  display:flex;
-`;
 
-const PageNum =styled.div`
-display:flex;
-margin-left:-67%;
 
-`;
-const Num=styled.div`
-height:20px;
-width:20px;
-border:1px solid red;
-font-size:10px;
-padding:2px 5px 2px 5px;
-margin:3px;
-
-`;
-const PButton=styled.div`
-  font-size:12px;
-  border:1px solid blue;
-  height:20px;
-  width:40px;
-  justify-content:center;
-`
 
 const KindMoments = () => {
   const [value, setValue] = useState([]);
@@ -297,16 +269,7 @@ const KindMoments = () => {
         </Bott>
         
 
-        <Pagination>
-        <p style={{ fontSize: "16px" }}>Page : </p>
         
-        
-          
-          <PButton onClick={() => setPageNumber(pageNumber + 1)}>
-            Next »
-          </PButton>
-        
-      </Pagination>
         
         
         {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
@@ -319,8 +282,9 @@ const KindMoments = () => {
   <Heading>Loading...</Heading>
   </Heading>
   :
-       
+   
   <KindCard res={state} query={search} />
+  
   }
     
      </>
