@@ -200,11 +200,11 @@ const PButton=styled.div`
 `
 
 const KindMoments = () => {
+  const [value, setValue] = useState([]);
   const [state, setState] = useState([])
   const[search,setSearch]=useState("")
   const[find,setFind]=useState("")
   const[pageNumber,setPageNumber]=useState(1)
-  
   
   
   useEffect(() => {
@@ -226,11 +226,20 @@ const KindMoments = () => {
     });
   },[pageNumber]);
 
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    return await axios
+      .get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
+      .then((response) => {
+        setState(response.state);
+        setValue("");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   console.log(state)
-
-
-  
-
   return (
     <>
       <Top>
@@ -266,7 +275,6 @@ const KindMoments = () => {
           </Box>
         </Topright>
       </Top>
-
  
         <Bott>
           <BottLeft>
@@ -311,7 +319,6 @@ const KindMoments = () => {
         
       </Pagination>
         
-       
         
         {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
   thickness='4px'
@@ -331,8 +338,3 @@ const KindMoments = () => {
     
   )
 }
-
-
-
-
-export default KindMoments;
