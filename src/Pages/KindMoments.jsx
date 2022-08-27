@@ -4,7 +4,7 @@ import KindCard from "../Components/KindCard";
 import axios from "axios";
 import { SettingsOverscanOutlined } from "@mui/icons-material";
 import { useSearchParams } from "react-router-dom";
-
+import { Heading, Spinner } from "@chakra-ui/react";
 const Top = styled.div`
   width: 100%;
   height: 300px;
@@ -204,11 +204,14 @@ const PButton=styled.div`
 
 
 const KindMoments = () => {
+
+  const [state, setState] = useState([]);
+  const [value, setValue] = useState([]);
+
   const [state, setState] = useState([])
   const[search,setSearch]=useState("")
   const[find,setFind]=useState("")
   const[pageNumber,setPageNumber]=useState(1)
-  
   
   
   useEffect(() => {
@@ -230,10 +233,23 @@ const KindMoments = () => {
     });
   },[pageNumber]);
 
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    return await axios
+      .get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
+      .then((response) => {
+        setState(response.state);
+        setValue("");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   console.log(state)
 
 
-  
+ 
 
   return (
     <>
@@ -271,6 +287,46 @@ const KindMoments = () => {
         </Topright>
       </Top>
 
+      <Bott>
+        <BottLeft>
+          <Button3>Moments</Button3>
+          <Button2>Deal Reviews</Button2>
+          <Button2>Following</Button2>
+        </BottLeft>
+        <BottRight>
+          <Input
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="Search user or Shop"
+          />
+          <Select name="" id="">
+            <option value="">All Locations</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="hyderbad">Hyderabad</option>
+          </Select>
+          <Button onClick={() => handleSearch}>Search</Button>
+        </BottRight>
+      </Bott>
+      {!state.length ? (
+        <Heading style={{ textAlign: "center", height: "600px" }}>
+          <Spinner
+            thickness="4px"
+            speed="1s"
+            emptyColor="gray.200"
+            color="blue.600"
+            size="xl"
+            mt="20px"
+          />
+          <Heading>Loading...</Heading>
+        </Heading>
+      ) : (
+        <KindCard res={state} />
+      )}
+    </>
+  );
+};
+
  
         <Bott>
           <BottLeft>
@@ -306,13 +362,24 @@ const KindMoments = () => {
         
        
         <KindCard res={state} query={search} />
+        {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
+  thickness='4px'
+  speed='1s'
+  emptyColor='gray.200'
+  color='blue.600'
+  size='xl'
+  mt="20px"/>
+  <Heading>Loading...</Heading>
+  </Heading>
+  :
+       
+        <KindCard res={state}/>
+  }
     
      </>
     
   )
 }
-
-
 
 
 export default KindMoments;

@@ -1,6 +1,8 @@
 .helpmain {
   display: flex;
   text-align: center;
+  width:60%;
+  margin:auto;
 }
 .sidebarMainLeft {
   width: 30%;
@@ -25,7 +27,8 @@
 }
 .sidebarMainContent {
   background-color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 20px;
   text-align: left;
   padding: 20px;

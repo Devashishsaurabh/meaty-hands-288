@@ -6,6 +6,7 @@ const Help = () => {
     document.title="General Help | KindMeal.my"
   })
   return (
+    <div>
     <div className={styled.helpmain}>
       <div className={styled.sidebarMainLeft}>
         <HelpRoute />
@@ -57,6 +58,7 @@ const Help = () => {
           quaerat ratione?
         </p>
       </div>
+    </div>
     </div>
   );
 };

@@ -365,14 +365,14 @@ const Navbar = () => {
             <Nav>Recipes</Nav>
           </NavLink>
           <NavLink
-            to={"*"}
+            to={"/directory"}
             exact
             style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
           >
             <Nav>Directory</Nav>
           </NavLink>
           <NavLink
-            to={"/not"}
+            to={"/articles"}
             exact
             style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
           >
@@ -391,3 +391,7 @@ const Navbar = () => {
   );
 };
 export default Navbar;
+
+
+
+ 

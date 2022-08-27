@@ -4,16 +4,22 @@ import {
   FAILURE2,
   FAILURE3,
   FAILURE4,
+  FAILURE5,
+  FAILURE6,
   REQUEST,
   REQUEST1,
   REQUEST2,
   REQUEST3,
   REQUEST4,
+  REQUEST5,
+  REQUEST6,
   SUCCESS,
   SUCCESS1,
   SUCCESS2,
   SUCCESS3,
   SUCCESS4,
+  SUCCESS5,
+  SUCCESS6,
 } from "./actiontype";
 import axios from "axios";
 function getProductsData() {
@@ -137,10 +143,70 @@ function getProductsData4() {
   };
 }
 
+
+
+  //////////////// 5th /////////////
+
+  function getProductsData5(p=1) {
+    return async (dispatch) => {
+      dispatch({
+        type: REQUEST5,
+        payload: true,
+      });
+      let data = await axios.get(`https://het4bs.sse.codesandbox.io/artical?_page=${p}&_limit=5`);
+      let ourData5 = data.data;
+      console.log("ourData:", ourData5);
+      if (data) {
+        dispatch({
+          type: SUCCESS5,
+          payload: ourData5,
+        });
+      } else {
+        dispatch({
+          type: FAILURE5,
+          payload: true,
+        });
+      }
+    };
+  }
+  
+
+
+  ///////////////  6th ///////////
+
+
+
+  function getProductsData6(p=1) {
+    return async (dispatch) => {
+      dispatch({
+        type: REQUEST6,
+        payload: true,
+      });
+      let data = await axios.get(`https://het4bs.sse.codesandbox.io/directory?_page=${p}&_limit=5`);
+      let ourData6 = data.data;
+      console.log("ourData:", ourData6);
+      if (data) {
+        dispatch({
+          type: SUCCESS6,
+          payload: ourData6,
+        });
+      } else {
+        dispatch({
+          type: FAILURE6,
+          payload: true,
+        });
+      }
+    };
+  }
+  
+
+
 export {
   getProductsData,
   getProductsData1,
   getProductsData2,
   getProductsData3,
   getProductsData4,
+  getProductsData5
+  ,getProductsData6
 };
