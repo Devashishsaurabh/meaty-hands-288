@@ -170,7 +170,7 @@ const Box1 = styled.div`
 
 const KindMoments = () => {
   const [state, setState] = useState([]);
-  const[value,setValue]=useState([])
+  const [value, setValue] = useState([]);
   useEffect(() => {
     document.title =
       "KindMoments, Saving Lives One Photo At A Time | KindMeal.my";
@@ -182,18 +182,18 @@ const KindMoments = () => {
     });
   });
 
-  const handleSearch=async(e)=>{
-     e.preventDefault();
-     return await axios.get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
-     .then((response)=>{
-      setState(response.state)
-      setValue("");
-     })
-     .catch((err)=>{
-      console.log(err)
-     })
-     
-  }
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    return await axios
+      .get(`https://21wj24.sse.codesandbox.io/data?q=${value}`)
+      .then((response) => {
+        setState(response.state);
+        setValue("");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <>
@@ -231,46 +231,44 @@ const KindMoments = () => {
         </Topright>
       </Top>
 
- 
-        <Bott>
-          <BottLeft>
-            <Button3>Moments</Button3>
-            <Button2>Deal Reviews</Button2>
-            <Button2>Following</Button2>
-          </BottLeft>
-          <BottRight>
-            <Input type="text" value={value}
-            onChange={(e)=>setValue(e.target.value)} 
-            placeholder="Search user or Shop" />
-            <Select name="" id="">
-              <option value="">All Locations</option>
-              <option value="mumbai">Mumbai</option>
-              <option value="hyderbad">Hyderabad</option>
-              
-            </Select>
-            <Button onClick={()=>handleSearch} >Search</Button>
-          </BottRight>
-        </Bott>
-        {!state.length ? <Heading style={{textAlign:"center",height:"600px"}}><Spinner
-  thickness='4px'
-  speed='1s'
-  emptyColor='gray.200'
-  color='blue.600'
-  size='xl'
-  mt="20px"/>
-  <Heading>Loading...</Heading>
-  </Heading>
-  :
-       
-        <KindCard res={state}/>
-  }
-    
-     </>
-    
-  )
-}
-
-
-
+      <Bott>
+        <BottLeft>
+          <Button3>Moments</Button3>
+          <Button2>Deal Reviews</Button2>
+          <Button2>Following</Button2>
+        </BottLeft>
+        <BottRight>
+          <Input
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="Search user or Shop"
+          />
+          <Select name="" id="">
+            <option value="">All Locations</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="hyderbad">Hyderabad</option>
+          </Select>
+          <Button onClick={() => handleSearch}>Search</Button>
+        </BottRight>
+      </Bott>
+      {!state.length ? (
+        <Heading style={{ textAlign: "center", height: "600px" }}>
+          <Spinner
+            thickness="4px"
+            speed="1s"
+            emptyColor="gray.200"
+            color="blue.600"
+            size="xl"
+            mt="20px"
+          />
+          <Heading>Loading...</Heading>
+        </Heading>
+      ) : (
+        <KindCard res={state} />
+      )}
+    </>
+  );
+};
 
 export default KindMoments;
