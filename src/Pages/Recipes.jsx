@@ -314,6 +314,146 @@ const Recipes = () => {
       </div>
                   
                  </div>
+
+                  {/* third */}
+
+
+                  <div>
+                    <img  style={{margin:"auto",width:"65%"}} src="https://www.kindmeal.my/images/ads/banner_ekoeko-1100x280.jpg" alt="" />
+                  </div>
+
+
+                  {/* last part */}
+
+                  <div className={style.last} >
+                 <div  className={style.box} >
+                 
+      <div className={style.pehla}>
+        <div className={style.corner}> <img style={{borderRadius:"50%",height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/member/29/29512-s.jpg" alt=""/> </div>
+        <div className={style.kind}>KindMealChef</div>
+        <div className={style.button}><button>View</button></div>
+      </div>
+           <div className={style.dusra}>
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039457-58885-m.jpg" alt="" />
+           </div>
+
+            <div className= {style.tisra} >
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_time_small.png" alt="" />  </div>
+               <div style={{marginRight:"50px"}}>30 mins</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_heart_small.png" alt="" /></div>
+               <div>0</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_commentbubble_small.png" alt="" /> </div>
+               <div>0</div>
+            </div>
+      </div>
+ 
+      <div className={style.box} >
+      <div className={style.pehla}>
+        <div className={style.corner}> <img style={{borderRadius:"50%",height:"100%",width:"100%"}} src="https://www.kindmeal.my/images/default_male-s.jpg" alt=""/> </div>
+        <div className={style.kind}>KindMealChef </div>
+        <div className={style.button}><button>View</button></div>
+      </div>
+           <div className={style.dusra}>
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1000/1000007-19413-m.jpg" alt="" />
+           </div>
+
+            <div className= {style.tisra} >
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_time_small.png" alt="" />  </div>
+               <div style={{marginRight:"50px"}}>1 Hr</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_heart_small.png" alt="" /></div>
+               <div>3</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_commentbubble_small.png" alt="" /> </div>
+               <div>3</div>
+            </div>
+      </div>
+
+      <div className={style.box} >
+      <div className={style.pehla}>
+        <div className={style.corner}> <img style={{borderRadius:"50%",height:"100%",width:"100%"}} src="https://www.kindmeal.my/images/default_male-s.jpg" alt=""/> </div>
+        <div className={style.kind}>KindMealChef </div>
+        <div className={style.button}><button>View</button></div>
+      </div>
+           <div className={style.dusra}>
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1000/1000008-19415-m.jpg" alt="" />
+           </div>
+
+            <div className= {style.tisra} >
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_time_small.png" alt="" />  </div>
+               <div style={{marginRight:"50px"}}>30 mins</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_heart_small.png" alt="" /></div>
+               <div>1</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_commentbubble_small.png" alt="" /> </div>
+               <div>1</div>
+            </div>
+      </div>
+     
+
+      <div className={style.box} >
+    
+      <div className={style.pehla}>
+        <div className={style.corner}> <img style={{borderRadius:"50%",height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/member/38/38334-s.jpg" alt=""/> </div>
+        <div className={style.kind}>BluePenguin</div>
+        <div className={style.button}><button>View</button></div>
+      </div>
+           <div className={style.dusra}>
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039472-58905-m.jpg" alt="" />
+           </div>
+
+            <div className= {style.tisra} >
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_time_small.png" alt="" />  </div>
+               <div style={{marginRight:"50px"}}>11 mins</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_heart_small.png" alt="" /></div>
+               <div>0</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_commentbubble_small.png" alt="" /> </div>
+               <div>0</div>
+            </div>
+      </div>
+
+     
+
+      <div className={style.box} >
+    
+      <div className={style.pehla}>
+        <div className={style.corner}> <img style={{borderRadius:"50%",height:"100%",width:"100%"}} src="https://www.kindmeal.my/images/default_male-s.jpg" alt=""/> </div>
+        <div className={style.kind}>BluePenguin</div>
+        <div className={style.button}><button>View</button></div>
+      </div>
+           <div className={style.dusra}>
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039453-58877-m.jpg" alt="" />
+           </div>
+
+            <div className= {style.tisra} >
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_time_small.png" alt="" />  </div>
+               <div style={{marginRight:"50px"}}>1 Hr</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_heart_small.png" alt="" /></div>
+               <div>0</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_commentbubble_small.png" alt="" /> </div>
+               <div>0</div>
+            </div>
+      </div>
+
+      <div className={style.box}  >
+    
+      <div className={style.pehla}>
+        <div className={style.corner}> <img style={{borderRadius:"50%",height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/member/37/37844-s.jpg" alt=""/> </div>
+        <div className={style.kind}>BluePenguin</div>
+        <div className={style.button}><button>View</button></div>
+      </div>
+           <div className={style.dusra}>
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039474-58907-m.jpg" alt="" />
+           </div>
+
+            <div className= {style.tisra} >
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_time_small.png" alt="" />  </div>
+               <div style={{marginRight:"50px"}}>55 min</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}}  src="https://www.kindmeal.my/images/icon_heart_small.png" alt="" /></div>
+               <div>1</div>
+               <div className={style.tisra1}><img style={{height:"30px",width:"30px"}} src="https://www.kindmeal.my/images/icon_commentbubble_small.png" alt="" /> </div>
+               <div>1</div>
+            </div>
+      </div>
+                  
+                 </div>
     </div>
     
   )
