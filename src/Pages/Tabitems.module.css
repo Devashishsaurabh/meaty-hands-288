@@ -1,10 +1,20 @@
 .tabbtn{
     border: 1px solid rgb(137, 137, 137);
     background-color:rgb(242, 242, 242);
-    font-size: 18px;
+    font-size: 22px;
+    color: rgb(87, 85, 85);
     padding: 5px 10px;
     margin: 5px;
     border-radius: 4px;
+    height:55px;
+    width:190px;
+    align-items: center;
+    outline: rgb(255, 255, 255);
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .tabbtn:hover{
     background-color: rgb(235, 235, 235);
