@@ -1,14 +1,13 @@
 .tabbtn{
     border: 1px solid rgb(137, 137, 137);
     background-color:rgb(242, 242, 242);
-    font-size: 22px;
+    font-size: 20px;
     color: rgb(87, 85, 85);
-    padding: 5px 10px;
-    margin: 5px;
     border-radius: 4px;
+    padding-top: 5px;
     height:55px;
-    width:190px;
-    align-items: center;
+    width:180px;
+    text-align: center;
     outline: rgb(255, 255, 255);
 }
 .btn{

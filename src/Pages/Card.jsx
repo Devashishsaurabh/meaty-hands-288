@@ -60,8 +60,7 @@ export default function Card({ offerCardData, reviews, name }) {
                 <Offercard
                   url={ele.url}
                   alt={ele.alt}
-                  name={ele.name}
-                  percentage={`${ele.percentage}%`}
+                  
                 />
               ))}
             </div>
@@ -96,8 +95,6 @@ export default function Card({ offerCardData, reviews, name }) {
                   <Offercard
                     url={ele.url}
                     alt={ele.alt}
-                    name={ele.name}
-                    percentage={`${ele.percentage}%`}
                   />
                 ))}
 
@@ -106,8 +103,7 @@ export default function Card({ offerCardData, reviews, name }) {
                   <Offercard
                     url={ele.url}
                     alt={ele.alt}
-                    name={ele.name}
-                    percentage={`${ele.percentage}%`}
+                    
                   />
                 ))}
             </div>

@@ -5,35 +5,28 @@
 }
 .pics{
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    justify-content:space-evenly;
     height: 100%;
     width: 80%;
+    gap:20px;
     padding-bottom: 25px;
     margin: 0 10%;
     border-bottom: 1px solid black;
 }
 .boxes{
-  padding-top: 15px;
-  display: flex;
-  padding-left:10%;
-  padding-right: 10%;
-  flex-wrap:wrap;
-}
-.review_card
-{
-  height: 100px;
-  width:40%;
-  border: 10px solid red;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width:80%;
 }
 .paginationclicker{
   font-size: 32px;
 }
 
 .btn{
-  margin: 0 10% 2% 2%;
+  margin: auto;
   padding: 10px 0;
-  width:80%;
+  width:70%;
+  text-align: center;
   background-color:rgb(236, 233, 233);
 }
 
@@ -41,10 +34,13 @@
   padding: 10px 5px;
   border: 1px solid rgb(159, 159, 159);
   margin: 15px 10%;
+  width: 70%;
+  margin:auto;
+  margin-top:2%;
+  margin-bottom: 2%;
 }
 .pages{
   display: flex;
-  flex-direction: row;
   font-size: 25px;
 }
 .next{

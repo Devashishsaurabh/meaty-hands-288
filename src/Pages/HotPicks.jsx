@@ -14,6 +14,7 @@ const HotPicks = () => {
   };
   return (
     <div>
+      <div style={{backgroundColor:"rgb(243, 243, 243)"}}>
       <div className={style.intro}>
         <div style={{ fontSize: 55, color: (155, 137, 137) }}>
           {cat} | Hot Picks
@@ -29,6 +30,7 @@ const HotPicks = () => {
           more on our members' delicious recommendations.
         </p>
       </div >
+      </div>
       <div className={style.tabs}>
         {categories.map((ele) => (
           <Tabitems name={ele} onClick={changehandler} />
