@@ -1,19 +1,379 @@
 {
-  "posts": [
+  "news": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "image": "https://scontent-xsp1-3.xx.fbcdn.net/v/t39.30808-6/300515466_5641073709286201_6306044406856564917_n.jpg?stp=dst-jpg_p720x720&_nc_cat=100&ccb=1-7&_nc_sid=8024bb&_nc_ohc=C41im-L7egMAX9zQW-b&_nc_ht=scontent-xsp1-3.xx&edm=ALdPpPkEAAAA&oh=00_AT_JKgwb3_MNiwDb0gfl51UMXsZ8oIQ5PwANkpSwJ4Sq5A&oe=630E0A5F",
+      "contain": "Yishensu Groceries, Ipoh Offers You A Wide Range Of Healthy,. "
+    },
+    {
+      "id": 2,
+      "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t15.5256-10/21707660_1430313403713822_4780572855584686080_n.jpg?stp=dst-jpg_p720x720&_nc_cat=111&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=RcBoqAsP5BcAX8IlQCB&_nc_ht=scontent-sin6-1.xx&edm=ALdPpPkEAAAA&oh=00_AT86ngFWk7axc_ZePJi07LZ5zK_e1S33BI1VqIfzQv82gA&oe=6309CC86",
+      "contain": "Creamy Hasselback Potatoes"
+    },
+    {
+      "id": 3,
+      "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t15.5256-10/297490495_5300872103341148_4812180245387187070_n.jpg?stp=dst-jpg_p720x720&_nc_cat=110&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=VfNjjhciLoUAX86UY6i&_nc_ht=scontent-sin6-1.xx&edm=ALdPpPkEAAAA&oh=00_AT_GHdGkvDhzxO3jgLTv94G2xASUrj-lxmmXAlVC-BxDQA&oe=630A5A29",
+      "contain": "Busy Beaver Delivers Lettuce To Zoo Friends"
+    },
+    {
+      "id": 4,
+      "image": "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/17882065_1280487598696404_688886872805474304_n.jpg?stp=dst-jpg_p720x720&_nc_cat=104&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=RXw6R_9NVUMAX_EvyFB&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT9OkuKtj9BLHy5l7-4c5Jt-dbGq6aVPFmK72s2SD12j5Q&oe=630ED747",
+      "contain": "Spicy Sweet Potato Hash Browns "
+    },
+    {
+      "id": 5,
+      "image": "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/297287041_759478638588669_7244009508553843157_n.jpg?stp=dst-jpg_p720x720&_nc_cat=109&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=RDmX5SwUhPkAX-8LWo3&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT8_kprBO8Hi6gN8WsrjERfTdpocasGbKCJdDUzBYPrf1Q&oe=630A3112",
+      "contain": "Hatching Animals 🐣"
     }
   ],
-  "comments": [
+  "Moments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "image": "https://www.kindmeal.my/photos/moment/24/24309-46678-s.jpg",
+      "contain": "Destin Vegetarian Restaurant"
+    },
+    {
+      "id": 2,
+      "image": "https://www.kindmeal.my/photos/deal/7/707-4819-s.jpg",
+      "contain": "Simple Is the Best"
+    },
+    {
+      "id": 3,
+      "image": "https://www.kindmeal.my/photos/moment/24/24307-46677-s.jpg",
+      "contain": "Restaurant Hao Kai Xin 街頭燒蟹炒啦啦"
+    },
+    {
+      "id": 4,
+      "image": "https://www.kindmeal.my/photos/deal/7/717-5054-s.jpg",
+      "contain": "Your Healthier Options"
+    },
+    {
+      "id": 5,
+      "image": "https://www.kindmeal.my/photos/moment/24/24305-46676-s.jpg",
+      "contain": "Amelio Desa Parkcity"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  "Resto": [
+    {
+      "id": 1,
+      "image": "https://www.kindmeal.my/photos/item/0/494-6160-s.jpg",
+      "contain": "Garden Burger"
+    },
+    {
+      "id": 2,
+      "image": "https://www.kindmeal.my/photos/item/0/251-2536-s.jpg",
+      "contain": " 7.Sweet Gochujang Dressing"
+    },
+    {
+      "id": 3,
+      "image": "https://www.kindmeal.my/photos/item/0/566-8393-s.jpg",
+      "contain": "Cucur Ud'ng"
+    },
+    {
+      "id": 4,
+      "image": "https://www.kindmeal.my/photos/item/0/335-3872-s.jpg",
+      "contain": "Taco Set"
+    },
+    {
+      "id": 5,
+      "image": "https://www.kindmeal.my/photos/item/0/447-5252-s.jpg",
+      "contain": "U Vege Magherita"
+    }
+  ],
+
+  "Amazing": [
+    {
+      "id": 1,
+      "image": "https://www.kindmeal.my/photos/member/41/41524-m.jpg",
+      "contain": "KellyLim1"
+    },
+    {
+      "id": 2,
+      "image": "https://www.kindmeal.my/photos/member/41/41079-m.jpg",
+      "contain": "YuXinLau"
+    },
+    {
+      "id": 3,
+      "image": "https://www.kindmeal.my/photos/member/39/39271-m.jpg",
+      "contain": "CARMENLee3"
+    },
+    {
+      "id": 4,
+      "image": "https://www.kindmeal.my/photos/member/37/37179-m.jpg",
+      "contain": "SooYeeLim"
+    },
+    {
+      "id": 5,
+      "image": "https://www.kindmeal.my/photos/member/39/39382-m.jpg",
+      "contain": "HelenaWong1"
+    }
+  ],
+  "Coupon": [
+    {
+      "id": 1,
+      "image": "https://www.kindmeal.my/images/intro_deal.png",
+      "contain": "Get Great Deals",
+      "des": "Show our FREE digital coupons to instantly enjoy exciting deals"
+    },
+    {
+      "id": 2,
+      "image": "https://www.kindmeal.my/images/intro_kindmoment.png",
+      "contain": "Share KindMoments",
+      "des": "Spread the joy by sharing your yummy dining moments"
+    },
+    {
+      "id": 3,
+      "image": "https://www.kindmeal.my/images/intro_menu.png",
+      "contain": "Discover Delicious Food",
+      "des": "Explore the latest exquisite offerings and creative menus"
+    },
+    {
+      "id": 4,
+      "image": "https://www.kindmeal.my/images/intro_friends.png",
+      "contain": "Meet Food Lovers",
+      "des": "Make new, compassionate friends and share great food tips"
+    }
+  ],
+
+  "artical": [
+    {
+      "id": "1",
+      "image": "https://www.kindmeal.my/photos/article/20/20044-l.jpg",
+      "contain": "Spicy Sweet Potato Hash Browns",
+      "kind": "by KindMeal.my",
+      "des": "These golden hash browns are the perfect combo of sweet and spicy, and they go incredibly well with homemade guacamole 🥑"
+    },
+    {
+      "id": "2",
+      "image": "https://www.kindmeal.my/photos/article/20/20043-l.jpg",
+      "contain": "Rescued Cow Asks For More Scratches",
+      "kind": "by KindMeal.my",
+      "des": "Yishensu Groceries, Ipoh offers you a wide range of healthy, nutritious and tasty vegetarian products! Explore Yishensu's exclusive range of groceries, as well as meat-free retail products from popular brands. Enjoy 10% off at their Ipoh store:"
+    },
+    {
+      "id": "3",
+      "image": "https://www.kindmeal.my/photos/article/19/19994-l.jpg",
+      "contain": "Rescued Cow Asks For More Scratches",
+      "kind": "by KindMeal.my",
+      "des": "Chico LOVES scratches... and asks for more! ❤🐮"
+    },
+
+    {
+      "id": "4",
+      "image": "https://www.kindmeal.my/photos/article/19/19982-l.jpg",
+      "contain": "The Top 7 Smartest Animals",
+      "kind": "by KindMeal.my",
+      "des": "Animals are really smart! 😍"
+    },
+    {
+      "id": "5",
+      "image": "https://www.kindmeal.my/photos/article/20/20047-l.jpg",
+      "contain": "Animal Abuse Documented At Multiple Markets In San Francisco",
+      "kind": "by KindMeal.my",
+      "des": "We recently conducted an investigation into live animal markets in the Bay Area, finding welfare violations at 11 shops that sold and slaughtered live animals. We documented frogs piled on top of each other and chickens stuffed into metal cages. More from Plant Based News:"
+    },
+    {
+      "id": "6",
+      "image": "https://www.kindmeal.my/photos/article/20/20046-l.jpg",
+      "contain": " More And More Athletes Are Seeing The Value In Adopting A Vegan Diet And Proving..",
+      "kind": "by KindMeal.my",
+      "des": "More and more athletes are seeing the value in adopting a #vegan diet and proving you don’t need animal products to compete at the highest level. Here's what Venus Williams had to say about taking animal off her plate 💚. Read about more vegan athletes here:"
+    },
+    {
+      "id": "7",
+      "image": "https://www.kindmeal.my/photos/article/20/20045-l.jpg",
+      "contain": "Compass Group Continues To Ignore The Cries Of Mother Pigs, Who Can''t Even Turn ..",
+      "kind": "by KindMeal.my",
+      "des": "Compass Group continues to ignore the cries of mother pigs, who can't even turn around or nurture their piglets.🐷💔 After 10 years, the world's largest food services company has abandoned its public commitment to ban crates for mother pigs. Don't let Compass get away with its lies any longer. 👉 We."
+    },
+    {
+      "id": "8",
+      "image": "https://www.kindmeal.my/photos/article/20/20041-l.jpg",
+      "contain": "The Ultimate Guide To Going Vegan In A Non-vegan Household - Animal Outlook",
+      "kind": "by KindMeal.my",
+      "des": "Want to go vegan, but your loved ones are big meat eaters? Here’s a few tips and strategies to make your switch to veganism as smooth and havoc-free as possible, and most importantly, enjoyable. Read our new blog for more"
+    },
+    {
+      "id": "9",
+      "image": "https://www.kindmeal.my/photos/article/20/20040-l.jpg",
+      "contain": "Undercover Investigation At Live Markets In Bay Area Reveals Hidden Abuse And Cruelty",
+      "kind": "by KindMeal.my",
+      "des": "Right across the San Francisco Bay Area are dozens of live markets where animals are sold live or slaughtered and sold right to customers. Our undercover investigators visited 18 live markers in San Francisco, San Jose, and Oakland and were shocked by what they saw. Read more from One Green Planet:.."
+    },
+    {
+      "id": "10",
+      "image": "https://www.kindmeal.my/photos/article/20/20039-l.jpg",
+      "contain": "In The First 6 Months Of 2022, You Helped Impact Over163.9 Million Animals. Over..",
+      "kind": "by KindMeal.my",
+      "des": "In the first 6 months of 2022, you helped impact over❗️163.9 million animals❗️ 💙Over 50,000 people showed their support to end the sale of foie gras in the U.S. 🐷More than 32,000 people were inspired to go plant-based with the help of LoveVeg.com. 🐥Over 50 million farmed animals are now protecte."
+    },
+    {
+      "id": "11",
+      "image": "https://www.kindmeal.my/photos/article/20/20037-l.jpg",
+      "contain": "Creamy Hasselback Potatoes",
+      "kind": "by KindMeal.my",
+      "des": "Looking for interesting creamy plant-based potatoes recipes?"
+    },
+    {
+      "id": "12",
+      "image": "https://www.kindmeal.my/photos/article/20/20034-l.jpg",
+      "contain": "Busy Beaver Delivers Lettuce To Zoo Friends",
+      "kind": "by KindMeal.my",
+      "des": "Filbert the beaver encourages his friends to eat more vege!"
+    },
+    {
+      "id": "13",
+      "image": "https://www.kindmeal.my/photos/article/19/19993-l.jpg",
+      "contain": "Teaching My Pet Pig To Talk 🐷",
+      "kind": "by KindMeal.my",
+      "des": "Teaching pet pig to  🐷"
+    }
+  ],
+  "directory": [
+    {
+      "id": "1",
+      "name": "AENON The Health Kitchen",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "2",
+      "name": "Eco Life Kitchen",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "3",
+      "name": "Bakti Woodlands Vegetarian Food Cafe",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "4",
+      "name": "Berjaya Cafe",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "5",
+      "name": "Bakti Woodlands Vegetarian Food Cafe",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "6",
+      "name": "Alam N-Ion",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "7",
+      "name": "AENON The Health Kitchen",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "8",
+      "name": "Alam N-Ion",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "9",
+      "name": "De Health Paradise Organic",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "10",
+      "name": "Dining Bowl",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "11",
+      "name": "AENON The Health Kitchen",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "12",
+      "name": "Alam N-Ion",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "13",
+      "name": "Easy Vege Experience",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "14",
+      "name": "Dining Bowl",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "Eco Life Kitchen"
+    },
+    {
+      "id": "15",
+      "name": "AENON The Health Kitchen",
+      "des": "AENON Health Kitchen, a hygienic restaurant that provides simple, palatable, wholesome & healthy food at affordable prices. We are dedicated in offering an extraordinary dining experience and providing consumers the opportunity to learn on healthy lifestyle. Health is a choice, not a chance!",
+      "add": "1, Jalan 4/93, Taman Miharja, Jalan Cheras, 55200 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "03 - 9201 0972",
+      "hour": "Sun - Thu: 11am - 3pm & 6pm - 9pm; Fri - Sat: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    },
+    {
+      "id": "15",
+      "name": "Alam N-Ion",
+      "des": " We serve delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. We also sell natural, handmade clay and wooden Buddhist crafts, health supplements, and homemade beauty products.",
+      "add": "15, Jalan 12/144A, Taman Bukit Cheras , 56000 Kuala Lumpur, Wilayah Persekutuan",
+      "phone": "019-275 9973",
+      "hour": "Fri - Wed: 9am - 4pm; Thu: Closed",
+      "image": "https://i.stack.imgur.com/HILmr.png"
+    }
+  ]
 }
