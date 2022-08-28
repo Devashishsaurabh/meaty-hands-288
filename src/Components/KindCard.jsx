@@ -8,45 +8,60 @@ import Pagination from "../Pages/Pagination"
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   width: 70%;
   margin: auto;
+  
 `;
 const Mainbox = styled.div`
-  border: 1px solid black;
+  
+  border-radius:5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 `;
 
 const Topsection = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  height: 45px;
-  border: 1px solid blue;
+  justify-content: space-around;
+  height: 70px;
+  
 `;
 const ProfileImage = styled.img`
-  height: 20px;
-  width: 40px;
-  border-radius: 15px;
+position: relative;
+width: 50px;
+height: 50px;
+overflow: hidden;
+border-radius:25px;
+  
 `;
 
 const NameDate = styled.div`
-  height: 30px;
-  width: 100px;
-  border: 1px solid blue;
+  height: 40px;
+  
+  
+  word-wrap: break-word;
+  width: 170px;
+  margin:5px 0px 0px 8px;
 `;
 
 const Name = styled.p`
   font-size: 14px;
+  color: #666666;
 `;
 const Date = styled.p`
   font-size: 14px;
+  
+    line-height: 16px;
+    color: #aaaaaa;
 `;
 
 const View = styled.button`
-  height: 20px;
-  width: 80px;
+  height: 30px;
+  width: 60px;
   background-color: red;
   color: white;
+  margin-top:8px;
+  border-radius:5px;
 `;
 
 const Bottom = styled.div``;
