@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ## Getting Started
-1. Live Link https://exquisite-fox-f5cb45.netlify.app/
+1. Live Link https://kindmealmy-masai.netlify.app/
 2. Fork this repository https://github.com/Devashishsaurabh/meaty-hands-288
 3. Clone the Forked repository.
    - **_Note_**: This Clone repository should be on your github account.
@@ -64,7 +64,7 @@ We tried our best to clone the website from scratch based on the knowledge gaine
 
 - Github Repo LINK: https://github.com/Devashishsaurabh/meaty-hands-288
 
-- Netlify Link: https://exquisite-fox-f5cb45.netlify.app/
+- Netlify Link: https://kindmealmy-masai.netlify.app/
 
 - A video link for an explanation of a Small Part of the Website: 
 
