@@ -334,7 +334,7 @@ const Recipes = () => {
         <div className={style.button}><button>View</button></div>
       </div>
            <div className={style.dusra}>
-             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1000/1000013-19421-m.jpg" alt="" />
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039457-58885-m.jpg" alt="" />
            </div>
 
             <div className= {style.tisra} >
@@ -354,7 +354,7 @@ const Recipes = () => {
         <div className={style.button}><button>View</button></div>
       </div>
            <div className={style.dusra}>
-             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1000/1000006-19412-m.jpg" alt="" />
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1000/1000007-19413-m.jpg" alt="" />
            </div>
 
             <div className= {style.tisra} >
@@ -374,7 +374,7 @@ const Recipes = () => {
         <div className={style.button}><button>View</button></div>
       </div>
            <div className={style.dusra}>
-             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039478-58911-m.jpg" alt="" />
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1000/1000008-19415-m.jpg" alt="" />
            </div>
 
             <div className= {style.tisra} >
@@ -396,7 +396,7 @@ const Recipes = () => {
         <div className={style.button}><button>View</button></div>
       </div>
            <div className={style.dusra}>
-             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039470-58903-m.jpg" alt="" />
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039472-58905-m.jpg" alt="" />
            </div>
 
             <div className= {style.tisra} >
@@ -419,7 +419,7 @@ const Recipes = () => {
         <div className={style.button}><button>View</button></div>
       </div>
            <div className={style.dusra}>
-             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039466-58897-m.jpg" alt="" />
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039453-58877-m.jpg" alt="" />
            </div>
 
             <div className= {style.tisra} >
@@ -440,7 +440,7 @@ const Recipes = () => {
         <div className={style.button}><button>View</button></div>
       </div>
            <div className={style.dusra}>
-             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039459-58887-m.jpg" alt="" />
+             <img style={{height:"100%",width:"100%"}} src="https://www.kindmeal.my/photos/recipe/1039/1039474-58907-m.jpg" alt="" />
            </div>
 
             <div className= {style.tisra} >
