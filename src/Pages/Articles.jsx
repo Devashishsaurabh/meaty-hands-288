@@ -4,7 +4,7 @@ import {getProductsData5} from "../Redux/AppReducer/action"
 import  { useEffect } from "react";
 import style from "./style.module.css";
 import { useState } from 'react';
-import {Button,Flex} from "@chakra-ui/react"
+import {Button,Flex, Heading, Spinner} from "@chakra-ui/react"
 function Articles() {
 
    useEffect(()=>{
@@ -70,6 +70,18 @@ function Articles() {
 
 
          <div>
+          {!articals.length ?
+          <Heading style={{ textAlign: "center", height: "600px" }}>
+          <Spinner
+            thickness="4px"
+            speed="1s"
+            emptyColor="gray.200"
+            color="blue.600"
+            size="xl"
+            mt="20px"
+          />
+          <h1>Loading...</h1>
+        </Heading>:
          <div className={style.artical}>
           {articals.map((item) => {
             return (
@@ -97,7 +109,7 @@ function Articles() {
               </div>
             );
           })}
-        </div>
+        </div>}
          </div>
     </div>
   )
