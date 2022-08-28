@@ -1,0 +1,52 @@
+.itemname{
+  font-size: 50px;
+  color: rgb(119, 118, 118);
+  padding-left:10%;
+}
+.pics{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    height: 100%;
+    width: 80%;
+    padding-bottom: 25px;
+    margin: 0 10%;
+    border-bottom: 1px solid black;
+}
+.boxes{
+  padding-top: 15px;
+  display: flex;
+  padding-left:10%;
+  padding-right: 10%;
+  flex-wrap:wrap;
+}
+.review_card
+{
+  height: 100px;
+  width:40%;
+  border: 10px solid red;
+}
+.paginationclicker{
+  font-size: 32px;
+}
+
+.btn{
+  margin: 0 10% 2% 2%;
+  padding: 10px 0;
+  width:80%;
+  background-color:rgb(236, 233, 233);
+}
+
+.maindiv{
+  padding: 10px 5px;
+  border: 1px solid rgb(159, 159, 159);
+  margin: 15px 10%;
+}
+.pages{
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+.next{
+  margin-left: 10px;
+}

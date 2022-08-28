@@ -1,0 +1,27 @@
+.relative{
+    position:relative;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-left:10px;
+    margin-right:10px;
+}
+.cardtext{
+    position:absolute;
+    bottom: 8px;
+}
+.perc{
+    position:absolute;
+    top: 8px;
+    right: 16px;
+}
+.singlecard{
+    display:flex;
+    flex-direction:row;
+}
+.singlecard{
+    width:250px;
+    height:250px;
+
+}

@@ -1,11 +1,12 @@
 import React from "react";
+import style from "./Offercard.module.css"
 
 export default function Offercard(props) {
   return (
-    <div className="relative">
+    <div className={style.singlecard}>
       <img src={props.url} alt={props.alt} />
-      <p className="absolute">{props.name}</p>
-      <p className="absolute">{props.percentage}</p>
+      <p className={style.cardtext}>{props.name}</p>
+      <p className={style.perc}>{props.percentage}</p>
     </div>
   );
 }
