@@ -1,20 +1,19 @@
 .elabo{
-    font-size: 35px;
+    font-size: 30px;
 }
 .intro{
-    background-color:rgb(243, 243, 243);
     text-align:start;
-    padding-left: 10%;
     padding-bottom: 3%;
+    width:70%;
+    margin:auto
 }
 .tabs{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-gap: 2px;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin:auto;
     padding-top: 5%;
+    width:70%;
 }
 .maincard{
     background-color:rgb(253, 252, 252);
