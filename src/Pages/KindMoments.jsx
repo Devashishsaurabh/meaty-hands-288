@@ -5,6 +5,7 @@ import axios from "axios";
 import { SettingsOverscanOutlined } from "@mui/icons-material";
 import { useSearchParams } from "react-router-dom";
 import { Heading, Spinner } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Top = styled.div`
   width: 100%;
@@ -176,7 +177,8 @@ const KindMoments = () => {
   const [state, setState] = useState([])
   const[search,setSearch]=useState("")
   const[find,setFind]=useState("")
-  const[pageNumber,setPageNumber]=useState(1)
+  const navigate=useNavigate()
+  //const[pageNumber,setPageNumber]=useState(1)
   
   
   useEffect(() => {
@@ -185,7 +187,7 @@ const KindMoments = () => {
   });
 
   useEffect(() => {
-    axios.get("https://ic3h4i.sse.codesandbox.io/data?_page=${pageNumber}&_limit=8").then((data) => {
+    axios.get("https://ic3h4i.sse.codesandbox.io/data").then((data) => {
       //setState(data.data);
      if(find===""){
         setState(data.data)
@@ -196,7 +198,7 @@ const KindMoments = () => {
       
       
     });
-  },[pageNumber]);
+  });
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -243,7 +245,7 @@ const KindMoments = () => {
             <About>
               Interesting food or restaurant? Share with 1000s of food lovers!
             </About>
-            <ButtonShare>Share</ButtonShare>
+            <ButtonShare onClick={()=>navigate("/login")}>Share</ButtonShare>
           </Box>
         </Topright>
       </Top>
