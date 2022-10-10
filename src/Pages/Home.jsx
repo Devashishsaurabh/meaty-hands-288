@@ -9,6 +9,7 @@ import {
 } from "../Redux/AppReducer/action";
 import { useDispatch, useSelector } from "react-redux";
 import { Heading, Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 import style from "./style.module.css";
 
@@ -266,9 +267,9 @@ const Home = () => {
         money now!
       </div>
 
-              <div className={style.heading4}> <button> Join KindMeal Now </button>
+      <Link to="/signup"> <div className={style.heading4}> <button> Join KindMeal Now </button>
               <p className={style.heading5}>Your tasty journey begins here</p>
-                        </div>
+                </div></Link>
                         
 
            

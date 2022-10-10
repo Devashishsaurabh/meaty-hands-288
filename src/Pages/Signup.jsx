@@ -127,21 +127,15 @@ const BBannerimg = styled.img`
   height: 100%;
 `;
 const initialState = {
-  name: "",
-  username: "",
   email: "",
   password: "",
 };
 const reducer = (state, action) => {
   switch (action.type) {
-    case "name":
-      return { ...state, name: action.payload };
     case "email":
       return { ...state, email: action.payload };
     case "password":
       return { ...state, password: action.payload };
-    case "username":
-      return { ...state, username: action.payload };
     default:
       return state;
   }
@@ -286,10 +280,8 @@ const Signup = () => {
                   type="text"
                   title="First name"
                   value={state.name}
-                  onChange={(e) =>
-                    setState({ type: "name", payload: e.target.value })
-                  }
-                  required
+                  
+             
                 />
                 <Input
                   name="lastname"
@@ -354,10 +346,6 @@ const Signup = () => {
                   style={{ width: "80%" }}
                   type="text"
                   value={state.username}
-                  onChange={(e) =>
-                    setState({ type: "username", payload: e.target.value })
-                  }
-                  required
                 />
               </div>
 

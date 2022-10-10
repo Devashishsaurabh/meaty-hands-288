@@ -102,7 +102,7 @@ const KindCard = ({ res,query }) => {
                 <ProfileImage src={e.avatar} />
                 <NameDate>
                   <Name>{e.username}</Name>
-                  <Date>August {Math.floor(Math.random() * 30)}th 2022</Date>
+                  <Date>August 24th 2022</Date>
                 </NameDate>
                 <View>View</View>
               </Topsection>
